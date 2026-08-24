@@ -1,0 +1,14 @@
+# Copiez ce fichier vers metadata.yml.
+title: Mon sujet
+description: Une courte description du sujet.
+
+# Les outils sont affichés dans le panneau droit de Reef.
+tools:
+  - id: match
+    repository: MEA-RUN/match
+    ref: main
+
+  # Un outil local contient au minimum tools/mon-outil/index.html.
+  # - id: mon-outil
+  #   path: tools/mon-outil
+  #   name: Mon outil

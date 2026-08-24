@@ -1,0 +1,15 @@
+name: Deploy Reef site
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    if: github.repository != 'MEA-RUN/subject-template'
+    uses: MEA-RUN/actions/.github/workflows/reef-deploy.yml@main
