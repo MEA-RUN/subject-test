@@ -1,0 +1,21 @@
+{
+  "title": "Reef Subject Test",
+  "description": "Déploiement de validation du template Subject avec Reef.",
+  "tools": [
+    {
+      "id": "match",
+      "name": "Match the Shape",
+      "icon": "i-lucide-wrench",
+      "description": "Interactive shape matching game for learning Python programming concepts",
+      "githubUrl": "https://github.com/MEA-RUN/match",
+      "version": "1.0.0",
+      "category": "tool",
+      "path": "/tools/match/index.html",
+      "localPath": "public/tools/match"
+    }
+  ],
+  "assets": {
+    "logo": null,
+    "images": []
+  }
+}

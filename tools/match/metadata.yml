@@ -1,0 +1,5 @@
+id: "match"
+name: "Match the Shape"
+version: "1.0.0"
+description: "Interactive shape matching game for learning Python programming concepts"
+author: "Manta Team"

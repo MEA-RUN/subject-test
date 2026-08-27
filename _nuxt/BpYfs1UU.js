@@ -1,0 +1,1 @@
+import{t as e}from"./bW6NxFOP.js";function t(e,t){if(e.length!==t.length)return!1;for(let n=0;n<e.length;n++)if(e[n]!==t[n])return!1;return!0}function n(t,n,r){let i=t.findIndex(t=>e(t,n)),a=t.findIndex(t=>e(t,r));if(i===-1||a===-1)return[];let[o,s]=[i,a].sort((e,t)=>e-t);return t.slice(o,s+1)}export{n,t};

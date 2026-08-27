@@ -1,0 +1,3995 @@
+# Manta Epitech Academy - Apprendre, Construire, Innover
+
+::u-page-hero
+#title
+Manta Epitech Academy
+
+#description
+Votre plateforme d'apprentissage complète pour le développement moderne.
+
+Accédez à des outils interactifs, des tutoriels et des ressources conçus pour vous aider à maîtriser la technologie et construire des solutions innovantes.
+
+#links
+  :::u-button
+  ---
+  color: neutral
+  size: xl
+  to: https://MEA-RUN.github.io/fr/getting-started/introduction
+  trailing-icon: i-lucide-arrow-right
+  ---
+  Commencer
+  :::
+::
+
+::u-page-section
+#title
+Tout ce dont vous avez besoin pour apprendre et construire
+
+#features
+  :::u-page-feature
+  ---
+  icon: i-lucide-graduation-cap
+  ---
+  #title
+  [Tutoriels Complets]{.text-primary}
+
+  #description
+  Des guides et tutoriels étape par étape conçus pour vous faire passer de débutant à expert. Apprenez à votre rythme avec des explications claires et des exemples pratiques.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-wrench
+  ---
+  #title
+  [Outils Interactifs]{.text-primary}
+
+  #description
+  Accédez à une collection d'outils éducatifs interactifs directement dans votre navigateur. Pratiquez des concepts, testez vos connaissances et expérimentez avec des implémentations réelles.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-code
+  ---
+  #title
+  [Exemples de Code]{.text-primary}
+
+  #description
+  Explorez des exemples de code bien documentés dans plusieurs langages de programmation. Tous les exemples incluent la coloration syntaxique et des explications détaillées pour vous aider à comprendre les bonnes pratiques.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-chart-network
+  ---
+  #title
+  [Diagrammes Visuels]{.text-primary}
+
+  #description
+  Des concepts complexes rendus simples avec des diagrammes Mermaid et des représentations visuelles. Comprenez l'architecture, les flux de travail et les relations en un coup d'œil.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-smartphone
+  ---
+  #title
+  [Design Responsive]{.text-primary}
+
+  #description
+  Apprenez n'importe où, n'importe quand. La plateforme est entièrement responsive et optimisée pour tous les appareils, du bureau au mobile, garantissant une expérience d'apprentissage fluide.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-search
+  ---
+  #title
+  [Recherche Plein Texte]{.text-primary}
+
+  #description
+  Trouvez rapidement les informations dont vous avez besoin grâce à la fonctionnalité de recherche intégrée. Naviguez dans la documentation, les tutoriels et les outils en toute simplicité.
+  :::
+::
+
+
+# Introduction
+
+Welcome to **Docus**, a fully integrated documentation solution built with [Nuxt UI](https://ui.nuxt.com){rel="&#x22;nofollow&#x22;"}.
+
+## What is Docus?
+
+Docus is a theme based on the [UI documentation template](https://docs-template.nuxt.dev/){rel="&#x22;nofollow&#x22;"}. While the visual style comes ready out of the box, your focus should be on writing content using the Markdown and [MDC syntax](https://content.nuxt.com/docs/files/markdown#mdc-syntax){rel="&#x22;nofollow&#x22;"} provided by [Nuxt Content](https://content.nuxt.com){rel="&#x22;nofollow&#x22;"}.
+
+We use this theme across all our Nuxt module documentations, including:
+
+::card-group
+  :::card
+  ---
+  icon: i-simple-icons-nuxtdotjs
+  target: _blank
+  title: Nuxt Image
+  to: https://image.nuxt.com
+  ---
+  The documentation of 
+
+  `@nuxt/image`
+  :::
+
+  :::card
+  ---
+  icon: i-simple-icons-nuxtdotjs
+  target: _blank
+  title: Nuxt Supabase
+  to: https://supabase.nuxtjs.org
+  ---
+  The documentation of 
+
+  `@nuxt/supabase`
+  :::
+::
+
+## Key Features
+
+This theme includes a range of features designed to improve documentation management:
+
+- **Powered by** [**Nuxt 4**](https://nuxt.com){rel="&#x22;nofollow&#x22;"}: Utilizes the latest Nuxt framework for optimal performance.
+- **Built with** [**Nuxt UI**](https://ui.nuxt.com){rel="&#x22;nofollow&#x22;"}: Integrates a comprehensive suite of UI components.
+- [**MDC Syntax**](https://content.nuxt.com/usage/markdown){rel="&#x22;nofollow&#x22;"} **via** [**Nuxt Content**](https://content.nuxt.com){rel="&#x22;nofollow&#x22;"}: Supports Markdown with component integration for dynamic content.
+- [**Nuxt Studio**](https://content.nuxt.com/docs/studio){rel="&#x22;nofollow&#x22;"} **Compatible**: Write and edit your content visually. No Markdown knowledge is required!
+- **Auto-generated Sidebar Navigation**: Automatically generates navigation from content structure.
+- **Full-Text Search**: Includes built-in search functionality for content discovery.
+- **Optimized Typography**: Features refined typography for enhanced readability.
+- **Dark Mode**: Offers dark mode support for user preference.
+- **Extensive Functionality**: Explore the theme to fully appreciate its capabilities.
+
+
+# Installation
+
+## Local development
+
+::steps
+### Create your docs directory
+
+Use the `docus` CLI to create a new Docus project in the `docs/` directory:
+
+```bash [Terminal]
+npx docus init docs
+```
+
+We recommend using the `npm` package manager.
+
+### Start your docs server in development
+
+Move to the `docs/` directory and start your docs server in development mode:
+
+```bash [Terminal]
+npm run dev
+```
+
+A local preview of your documentation will be available at <http://localhost:4000>{rel=""nofollow""}
+
+### Write your documentation
+
+Head over the [Edition](https://docus.dev/concepts/edition){rel=""nofollow""} section to learn how to write your documentation.
+::
+
+## Online Edition with Nuxt Studio
+
+::prose-steps
+### Create a new project on Nuxt Studio
+
+Choose `Start from a template` and select **Docus.** Clone it on your GitHub personal account or any organisation of your choice.
+
+### Deploy in one click
+
+Once your project has been created and you're in the project dashboard, navigate to the `Deploy` section, choose the `GitHub Pages` tab then click on the **Deploy** button.
+
+  :::prose-note
+  ---
+  to: https://content.nuxt.com/docs/studio/setup#enable-the-full-editing-experience
+  ---
+  This is a one click static deployment available with 
+
+  [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site){rel=""nofollow""}
+
+   but you can also handle deployment yourself and use the 
+
+  `Selfhosted`
+
+   tab.
+  :::
+
+### Write your documentation in the editor
+
+Once the deployment is achieved, you'll be able to display the preview of your documentation. You can browse your content pages to edit them or create new ones.
+
+:video{controls loop poster="https://res.cloudinary.com/nuxt/video/upload/v1747230893/studio/wzt9zfmdvk7hgmdx3cnt.jpg" src="https://res.cloudinary.com/nuxt/video/upload/v1747230893/studio/wzt9zfmdvk7hgmdx3cnt.mp4"}
+::
+
+
+# Project Structure
+
+Docus provides a ready-to-use [documentation website starter](https://github.com/nuxt-content/docus/tree/.starter){rel="&#x22;nofollow&#x22;"}.
+
+This is the minimal directory structure to get an up and running Docus website.
+
+```bash
+content/
+  index.md
+public/
+  favicon.ico
+package.json
+```
+
+### `content/` directory
+
+This is where you [write pages](https://docus.dev/concepts/edition){rel="&#x22;nofollow&#x22;"} in Markdown.
+
+### `public/` directory
+
+Files contained within the `public/` directory are served at the root and are not modified by the build process of your documentation. This is where you can locate your medias.
+
+### `package.json`
+
+This file contains all the dependencies and scripts for your application. The `package.json` of a Docus application si really minimal and looks like:
+
+```json [package.json]
+{
+  "name": "docus-starter",
+  "scripts": {
+    "dev": "docus dev",
+    "build": "docus build"
+  },
+  "devDependencies": {
+    "docus": "latest"
+  }
+}
+```
+
+### `app.config.ts`
+
+*This file is not mandatory to start a Docus application.*
+
+This is where you can [configure Docus](https://docus.dev/concepts/configuration){rel="&#x22;nofollow&#x22;"} to fit your branding, handle SEO and adapt links and socials.
+
+::prose-tip{to="https://docus.dev/concepts/nuxt"}
+Docus uses a layer system, you can go further and use any feature or file of a classical Nuxt project from 
+
+`nuxt.config.ts`
+
+ to 
+
+`app/components`
+
+ or 
+
+`server/`
+
+ directory.
+::
+
+
+# Web Editor
+
+## **Introduction**
+
+The [Nuxt Studio](https://nuxt.studio){rel="&#x22;nofollow&#x22;"} **web editor** is a browser-based visual interface for creating, editing, and reviewing your documentation. It provides a preview experience while keeping your work in sync with your Git repository.
+
+:video{controls loop src="https://res.cloudinary.com/nuxt/video/upload/v1747230893/studio/wzt9zfmdvk7hgmdx3cnt.mp4"}
+
+::prose-tip{to="https://content.nuxt.com/studio"}
+Learn more about Nuxt Studio in the Nuxt Content documentation.
+::
+
+## **Web Editor vs. CLI**
+
+The **web editor** of [Nuxt Studio](https://nuxt.studio){rel="&#x22;nofollow&#x22;"} allows you to manage your documentation entirely from your browser. There is no need for local development tools or terminal commands. It’s ideal for maintaining your docs in one centralised place, with an easy tool without any Markdown skills required.
+
+The &#x2A;*CLI (Command Line Interface)**, on the other hand, is a local tool designed for developers who prefer working in their own IDE.
+
+::prose-note
+Both tools are fully integrated with Git, so you can switch between them as needed. Team members can choose whichever method suits their workflow best.
+::
+
+## **Two distinct editors**
+
+Nuxt Studio offers a versatile workspace for both developers and content writers, giving them the freedom to choose between two distinct editors for content creation and management: the **Markdown editor** and the **Visual editor**.
+
+You can select your favorite editor from the settings page of your project.
+
+::prose-note
+Each editor serves its own purpose, some users are used to Markdown edition, while others prefer a non-technical, visual approach. At the end, 
+
+**Markdown syntax is the final output**
+
+ for both editors.
+::
+
+## **Markdown editor**
+
+The Markdown editor in Nuxt Studio provides full control over your content, allowing you to write directly you documentation in **Markdown** and integrate Vue components with the [MDC syntax](https://content.nuxt.com/docs/files/markdown#mdc-syntax){rel="&#x22;nofollow&#x22;"}.
+
+When your file is saved with the Markdown editor, the content is stored exactly as you've written it, preserving all specific syntax and formatting. This editor is ideal for users comfortable with Markdown who want precise control over the layout and structure of their content.
+
+## **Visual editor**
+
+The Nuxt Studio editor is heavily inspired by Notion, well known for its intuitive design and flexibility. Much like a standard text editor, the Studio editor is designed to be familiar and easy to use.
+
+However, it stands out with its additional features that improve the writing experience:
+
+### **Toolbar**
+
+Highlight your text to reveal the toolbar, giving you access to all the standard text editing features provided by the [Markdown syntax](https://MEA-RUN.github.io/essentials/markdown-syntax):
+
+- Title formatting
+- Bold
+- Italic
+- Strike-through
+- Code
+- Link
+- Class
+- Bullet list
+- Numerated list
+
+### **The** `/` **shortcut**
+
+Simply type `/` anywhere in the editor to access all Studio features.
+
+#### **Formatting features**
+
+- Title formatting
+- Line break
+- Horizontal rule
+- Code-block
+- Paragraph
+- Bold & italic
+
+#### **Components**
+
+One of Studio's standout features is its ability to integrate and customize any complex component directly within the editor.
+
+In other terms, all [Nuxt UI components](https://MEA-RUN.github.io/essentials/components) are usable and can be integrated directly from the editor. An editor can also tweak the component properties, slots and styles.
+
+::prose-note
+You can also create custom components and let the user integrate them from the visual editor.
+::
+
+Just type `/` to access the list of all the components available.
+
+#### **Images**
+
+Using the `/`shortcut, you can quickly insert an image by selecting the `Image` option. A modal will open to let you choose the media you want to insert.
+
+From the media modal, you can set the **alt attribute** for SEO and accessibility purpose.
+
+#### **Videos**
+
+Using the `/` shortcut, you can quickly insert a video by selecting the `Video` choice and filling up the Video URL.
+
+As soon as a video is added, a tab will automatically open with all the props field **available by default**, for you to fill out the URL and customize your media.
+
+## **Live Preview**
+
+Once your documentation is deployed, it provides a live preview feature that lets you instantly see updates to your project.
+
+We're using your production website to override contents and display the new visual. This is why we need the URL to be set in the **deploy** section.
+
+When you are editing your website with Studio, the live preview can be displayed on the right part of your screen. You get an instant feedback when typing. It syncs the preview based on your draft updates.
+
+## **Making Changes**
+
+To edit your documentation:
+
+1. **Browse files** using the file explorer.
+2. **Open a file** by clicking on it.
+3. **Edit content** in either visual or Markdown mode. All edits are automatically saved as drafts.
+4. **Preview your changes** to see how they’ll appear when published.
+
+## **Publishing Changes**
+
+When you’re ready to publish:
+
+- Click the **Publish** button in the top-right corner of the editor.
+- Your changes will be pushed directly to your deployment branch and go live immediately.
+
+
+# Migration
+
+## **Migrating to Docus**
+
+Already using a Markdown-based solution for your documentation? Whether it’s **Docus v1**, the **Nuxt UI docs template**, or another static site setup, migrating to Docus is simple and straightforward.
+
+Docus offers a clean and maintainable solution with a single dependency: the Docus library itself. There’s no need to manage multiple dependencies. With everything built-in and maintained together, keeping your documentation up to date is easier than ever.
+
+To migrate, just move your existing Markdown files into the `content/` directory of the Docus starter.
+
+From there, you have two scenarios:
+
+- **If your current docs already use Nuxt Content and the MDC syntax**, make sure the components used in your content exist in Nuxt UI. If any components are missing, you can easily create your own custom ones.
+- **If you’re using standard Markdown**, you can copy your files as is. Then, enhance your documentation progressively using the [built-in components](https://docus.dev/essentials/components){rel="&#x22;nofollow&#x22;"} provided by Nuxt UI.
+
+Once your content has been moved to the `content/` folder, you can go through the [configuration section](https://docus.dev/concepts/configuration){rel="&#x22;nofollow&#x22;"} to easily customize your app.
+
+Docus is designed to focus on writing content, so if you're already using Markdown, you can easily switch to it.
+
+
+# Markdown Syntax
+
+## Titles
+
+Use titles to introduce main sections. They structure your documentation and help users navigate content.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+## Titles
+
+#code
+```mdc
+## Titles
+```
+::
+
+### Subtitles
+
+Use subtitles to divide sections further. They create a more detailed content hierarchy for better readability.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+### Subtitles
+
+#code
+```mdc
+### Subtitles
+```
+::
+
+::tip
+Each title and subtitle creates an anchor and shows up automatically in the table of contents.
+::
+
+## Text Formatting
+
+Docus supports most Markdown formatting options.
+
+| Style  | How to use   | Result     |
+| ------ | ------------ | ---------- |
+| Bold   | `**bold**`   | **Bold**   |
+| Italic | `*italic*`   | *Italic*   |
+| Strike | `~~strike~~` | ~~Strike~~ |
+
+Combine formatting for richer text styles and visual emphasis.
+
+| Style         | How to use          | Result            |
+| ------------- | ------------------- | ----------------- |
+| Bold Italic   | `**_bold italic_**` | ***Bold Italic*** |
+| Bold Strike   | `~~**bold**~~`      | ~~**Bold**~~      |
+| Italic Strike | `~~*italic*~~`      | ~~*Italic*~~      |
+
+## Links
+
+Links connect different parts of your documentation and external resources, essential for user navigation and providing references.
+To create a link, wrap the link text in brackets `[]()`.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+[Nuxt UI](https://ui.nuxt.com/getting-started/installation/nuxt){rel=""nofollow""}
+
+#code
+```mdc
+[Nuxt UI](https://ui.nuxt.com/getting-started/installation/nuxt)
+```
+::
+
+### Internal links
+
+For linking within your documentation, use root-relative paths like `/getting-started/installation`.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+[Installation](https://MEA-RUN.github.io/getting-started/installation)
+
+#code
+```mdc
+[Installation](/getting-started/installation)
+```
+::
+
+## Lists
+
+Organize related items in a structured, readable format. Markdown supports unordered, ordered, and nested lists for various content needs.
+
+### Unordered
+
+Use unordered lists for items without a specific sequence. Start each item with a `-` symbol.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+- I'm a list item.
+- I'm another list item.
+- I'm the last list item.
+
+#code
+```mdc
+- I'm a list item.
+- I'm another list item.
+- I'm the last list item.
+```
+::
+
+### Ordered
+
+Use ordered lists when item order matters, like steps in a process. Start each item with a number.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+1. I'm a list item.
+2. I'm another list item.
+3. I'm the last list item.
+
+#code
+```mdc
+1. I'm a list item.
+2. I'm another list item.
+3. I'm the last list item.
+```
+::
+
+### Nested
+
+Create hierarchical lists with sub-items for complex structures. Indent sub-items by four spaces for nesting.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+- I'm a list item.
+  - I'm a nested list item.
+  - I'm another nested list item.
+- I'm another list item.
+
+#code
+```mdc
+- I'm a list item.
+  - I'm a nested list item.
+  - I'm another nested list item.
+- I'm another list item.
+```
+::
+
+## Tables
+
+Present structured data in rows and columns clearly. Tables are ideal for comparing data or listing properties.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+| Prop    | Default   | Type     |
+| ------- | --------- | -------- |
+| `name`  |           | `string` |
+| `size`  | `md`      | `string` |
+| `color` | `neutral` | `string` |
+
+#code
+```mdc
+| Prop    | Default   | Type                     |
+|---------|-----------|--------------------------|
+| `name`  |           | `string`{lang="ts-type"} |
+| `size`  | `md`      | `string`{lang="ts-type"} |
+| `color` | `neutral` | `string`{lang="ts-type"} |
+```
+::
+
+## Blockquotes
+
+Highlight important quotations, citations, or emphasized text. Blockquotes visually distinguish quoted content.
+
+### Singleline
+
+Single-line blockquotes are best for short, impactful quotes or citations that fit within a single line. To create a single-line blockquote, add a `>` in front of a paragraph. Ideal for short and impactful quotes.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+> Nuxt UI is a collection of Vue components, composables and utils built on top of Reka UI, oriented on structure and layout and designed to be used as building blocks for your app.
+
+#code
+```mdc
+> Nuxt UI is a collection of Vue components, composables and utils built on top of Reka UI, oriented on structure and layout and designed to be used as building blocks for your app.
+```
+::
+
+### Multiline
+
+Multi-line blockquotes are suitable for longer quotes or when you need to include multiple paragraphs within a single quotation.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+> Nuxt UI is a collection of Vue components, composables and utils built on top of Reka UI, oriented on structure and layout and designed to be used as building blocks for your app.
+>
+> Create beautiful, responsive, and accessible Vue applications with Nuxt UI.
+
+#code
+```mdc
+> Nuxt UI is a collection of Vue components, composables and utils built on top of Reka UI, oriented on structure and layout and designed to be used as building blocks for your app.
+>
+> Create beautiful, responsive, and accessible Vue applications with Nuxt UI.
+```
+::
+
+
+# Code Blocks
+
+## Basic
+
+### Inline Code
+
+Use inline code to display code snippets within text paragraphs. It's ideal for referencing code elements directly in sentences.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+`inline code`
+
+#code
+```mdc
+`inline code`
+```
+::
+
+### Code Blocks
+
+Use code blocks to display multi-line code snippets with syntax highlighting. Code blocks are essential for presenting code examples clearly.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+```ts
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui']
+})
+```
+
+#code
+````mdc
+```ts
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui']
+})
+```
+````
+::
+
+When writing a code-block, you can specify a filename that will be displayed on top of the code block. An icon will be automatically displayed based on the extension or the name.
+Filenames help users understand the code's location and purpose within a project.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+```ts [nuxt.config.ts]
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui']
+})
+```
+
+#code
+````mdc
+```ts [nuxt.config.ts]
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui']
+})
+```
+````
+::
+
+Every code-block has a built-in copy button that will copy the code to your clipboard.
+
+::tip{to="https://ui.nuxt.com/getting-started/icons/nuxt#theme"}
+Icons are already defined by default, but you can customize them in your `app.config.ts`:
+
+```ts [app.config.ts]
+export default defineAppConfig({
+  ui: {
+    prose: {
+      codeIcon: {
+        terminal: 'i-ph-terminal-window-duotone'
+      }
+    }
+  }
+})
+```
+::
+
+## Advanced
+
+### CodeGroup
+
+Group code blocks in tabs using `code-group`. `code-group` is perfect for showing code examples in multiple languages or package managers.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+  :::code-group{.w-full}
+  ```bash [pnpm]
+  pnpm add @nuxt/ui
+  ```
+
+  ```bash [yarn]
+  yarn add @nuxt/ui
+  ```
+
+  ```bash [npm]
+  npm install @nuxt/ui
+  ```
+
+  ```bash [bun]
+  bun add @nuxt/ui
+  ```
+  :::
+
+#code
+````mdc
+:::code-group
+
+```bash [pnpm]
+pnpm add @nuxt/ui
+```
+
+```bash [yarn]
+yarn add @nuxt/ui
+```
+
+```bash [npm]
+npm install @nuxt/ui
+```
+
+```bash [bun]
+bun add @nuxt/ui
+```
+
+::
+````
+::
+
+### CodeTree
+
+Display code blocks in a file tree view using `code-tree`. `code-tree` is excellent for showcasing project structures and file relationships.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+  :::code-tree{default-value="app/app.config.ts"}
+  ```ts [nuxt.config.ts]
+  export default defineNuxtConfig({
+    modules: ['@nuxt/ui'],
+
+    css: ['~/assets/css/main.css']
+  })
+
+  ```
+
+  ```css [app/assets/css/main.css]
+  @import "../../node_modules/tailwindcss";
+  @import "../../node_modules/@nuxt/ui";
+  ```
+
+  ```ts [app/app.config.ts]
+  export default defineAppConfig({
+    ui: {
+      colors: {
+        primary: 'sky',
+        colors: 'slate'
+      }
+    }
+  })
+  ```
+
+  ```vue [app/app.vue]
+  <template>
+    <UApp>
+      <NuxtPage />
+    </UApp>
+  </template>
+  ```
+
+  ```json [package.json]
+  {
+    "name": "nuxt-app",
+    "private": true,
+    "type": "module",
+    "scripts": {
+      "build": "nuxt build",
+      "dev": "nuxt dev",
+      "generate": "nuxt generate",
+      "preview": "nuxt preview",
+      "postinstall": "nuxt prepare",
+      "lint": "eslint .",
+      "lint:fix": "eslint --fix ."
+    },
+    "dependencies": {
+      "@iconify-json/lucide": "^1.2.18",
+      "@nuxt/ui": "4.0.0-alpha.1",
+      "nuxt": "^4.1.0"
+    },
+    "devDependencies": {
+      "eslint": "^9.34.0",
+      "typescript": "^5.9.3",
+      "vue-tsc": "^3.0.6"
+    }
+  }
+  ```
+
+  ```json [tsconfig.json]
+  {
+    "extends": "./.nuxt/tsconfig.json"
+  }
+  ```
+
+  ````md [README.md]
+  # Nuxt 4 Minimal Starter
+
+  Look at the [Nuxt 4 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+
+  ## Setup
+
+  Make sure to install the dependencies:
+
+  ```bash
+  # npm
+  npm install
+
+  # pnpm
+  pnpm install
+
+  # yarn
+  yarn install
+
+  # bun
+  bun install
+  ```
+
+  ## Development Server
+
+  Start the development server on `http://localhost:3000`:
+
+  ```bash
+  # npm
+  npm run dev
+
+  # pnpm
+  pnpm run dev
+
+  # yarn
+  yarn dev
+
+  # bun
+  bun run dev
+  ```
+
+  ## Production
+
+  Build the application for production:
+
+  ```bash
+  # npm
+  npm run build
+
+  # pnpm
+  pnpm run build
+
+  # yarn
+  yarn build
+
+  # bun
+  bun run build
+  ```
+
+  Locally preview production build:
+
+  ```bash
+  # npm
+  npm run preview
+
+  # pnpm
+  pnpm run preview
+
+  # yarn
+  yarn preview
+
+  # bun
+  bun run preview
+  ```
+
+  Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+  ````
+  :::
+::
+
+### `CodePreview`
+
+Use `code-preview` to show code output alongside the code. `code-preview` is ideal for interactive examples and demonstrating code results.
+Write the code to be previewed in a the `default` slot and the actual code in the `code` slot.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+label: Preview
+---
+  :::code-preview
+  ---
+  class: "[&>div]:*:my-0"
+  ---
+  `inline code`
+
+  #code
+  ```mdc
+  `inline code`
+  ```
+  :::
+
+#code
+````mdc
+::code-preview
+`inline code`
+
+#code
+```mdc
+`inline code`
+```
+::
+````
+::
+
+### `CodeCollapse`
+
+Use `code-collapse` for long code blocks to keep pages clean. `code-collapse` allows users to expand code blocks only when needed, improving readability.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+  :::code-collapse
+  ---
+  class: "[&>div]:my-0"
+  ---
+  ```css [main.css]
+  @import "tailwindcss";
+  @import "@nuxt/ui";
+
+  @theme {
+    --font-sans: 'Public Sans', sans-serif;
+
+    --breakpoint-3xl: 1920px;
+
+    --color-green-50: #EFFDF5;
+    --color-green-100: #D9FBE8;
+    --color-green-200: #B3F5D1;
+    --color-green-300: #75EDAE;
+    --color-green-400: #00DC82;
+    --color-green-500: #00C16A;
+    --color-green-600: #00A155;
+    --color-green-700: #007F45;
+    --color-green-800: #016538;
+    --color-green-900: #0A5331;
+    --color-green-950: #052E16;
+  }
+  ```
+  :::
+
+#code
+````mdc
+::code-collapse
+
+```css [main.css]
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+--font-sans: 'Public Sans', sans-serif;
+
+--breakpoint-3xl: 1920px;
+
+--color-green-50: #EFFDF5;
+--color-green-100: #D9FBE8;
+--color-green-200: #B3F5D1;
+--color-green-300: #75EDAE;
+--color-green-400: #00DC82;
+--color-green-500: #00C16A;
+--color-green-600: #00A155;
+--color-green-700: #007F45;
+--color-green-800: #016538;
+--color-green-900: #0A5331;
+--color-green-950: #052E16;
+}
+```
+
+::
+````
+::
+
+
+# Markdown Components
+
+Prose components are replacements for HTML typography tags. They provide a simple way to customize your UI when using Markdown.
+
+**Docus and Nuxt UI** provides a set of styled and beautiful prose components to help you write your documentation using the [MDC syntax](https://content.nuxt.com/docs/files/markdown#mdc-syntax){rel="&#x22;nofollow&#x22;"}.
+
+::prose-note{to="https://ui.nuxt.com/getting-started"}
+This page highlights only the prose components best suited for writing documentation. However, you can use 
+
+**any Nuxt UI component**
+
+ in your Markdown. For the full list of available components, visit the Nuxt UI documentation.
+::
+
+### `Accordion`
+
+Use the `accordion` and `accordion-item` components to display an [Accordion](https://ui.nuxt.com/components/accordion){rel="&#x22;nofollow&#x22;"} in your content.
+
+::tabs
+  :::tabs-item{icon="i-lucide-eye" label="Preview"}
+    ::::accordion
+      :::::accordion-item
+      ---
+      icon: i-lucide-circle-help
+      label: What is Docus and what are its key features??
+      ---
+      Docus is a fully integrated documentation solution built with Nuxt UI. It's a theme based on the UI documentation template that provides a ready-to-use visual. User can focus on content using Markdown and MDC syntax.
+      :::::
+
+      :::::accordion-item
+      ---
+      icon: i-lucide-circle-help
+      label: How do I get started with Docus?
+      ---
+      The only thing you need to start a Docus project is a 
+
+      `content/`
+
+       folder. You can have a check at the starter for a quick start.
+      :::::
+
+      :::::accordion-item{icon="i-lucide-circle-help" label="What is Nuxt UI?"}
+      [Nuxt UI](https://ui.nuxt.com/){rel=""nofollow""}
+
+       is a collection of premium Vue components, composables and utils.
+      :::::
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::accordion
+
+    :::accordion-item{label="What is Docus and what are its key features??" icon="i-lucide-circle-help"}
+    Docus is a fully integrated documentation solution built with Nuxt UI. It's a theme based on the UI documentation template that provides a ready-to-use visual. User can focus on content using Markdown and MDC syntax.
+    :::
+
+    :::accordion-item{label="How do I get started with Docus?" icon="i-lucide-circle-help"}
+    The only thing you need to start a Docus project is a `content/` folder. You can have a check at the starter for a quick start.
+    :::
+
+    :::accordion-item{label="What is Nuxt UI ?" icon="i-lucide-circle-help"}
+    [Nuxt UI](https://ui.nuxt.com/) is a collection of premium Vue components, composables and utils.
+    :::
+  ::
+  ```
+  :::
+::
+
+### `Badge`
+
+Use markdown in the default slot of the `badge` component to display a [Badge](https://ui.nuxt.com/components/badge){rel="&#x22;nofollow&#x22;"} in your content.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::badge
+    **v3.0.0**
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::badge
+  **v3.0.0**
+  ::
+  ```
+  :::
+::
+
+### `Callout`
+
+Use markdown in the default slot of the `callout` component to add eye-catching context to your content.
+
+Use the `icon` and `color` props to customize it. You can also pass any property from the [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link){rel="&#x22;nofollow&#x22;"} component.
+
+You can also use the `note`, `tip`, `warning` and `caution` shortcuts with pre-defined icons and colors.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::div{.flex.flex-col.gap-4.w-full}
+      :::::note{.w-full.my-0}
+      Here's some additional information for you.
+      :::::
+
+      :::::tip{.w-full.my-0}
+      Here's a helpful suggestion.
+      :::::
+
+      :::::warning{.w-full.my-0}
+      Be careful with this action as it might have unexpected results.
+      :::::
+
+      :::::caution{.w-full.my-0}
+      This action cannot be undone.
+      :::::
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::note
+  Here's some additional information.
+  ::
+
+  ::tip
+  Here's a helpful suggestion.
+  ::
+
+  ::warning
+  Be careful with this action as it might have unexpected results.
+  ::
+
+  ::caution
+  This action cannot be undone.
+  ::
+  ```
+  :::
+::
+
+### `Card` and `CardGroup`
+
+Use markdown in the default slot of the `card` component to highlight your content.
+
+Use the `title`, `icon` and `color` props to customize it. You can also pass any property from the [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link){rel="&#x22;nofollow&#x22;"}.
+
+Wrap your `card` components with the `card-group` component to group them together in a grid layout.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::card-group{.w-full.my-0}
+      :::::card
+      ---
+      icon: i-simple-icons-github
+      target: _blank
+      title: Dashboard
+      to: https://github.com/nuxt-ui-templates/dashboard
+      ---
+      A dashboard with multi-column layout.
+      :::::
+
+      :::::card
+      ---
+      icon: i-simple-icons-github
+      target: _blank
+      title: SaaS
+      to: https://github.com/nuxt-ui-templates/saas
+      ---
+      A template with landing, pricing, docs and blog.
+      :::::
+
+      :::::card
+      ---
+      icon: i-simple-icons-github
+      target: _blank
+      title: Docs
+      to: https://github.com/nuxt-ui-templates/docs
+      ---
+      A documentation with 
+
+      `@nuxt/content`
+
+      .
+      :::::
+
+      :::::card
+      ---
+      icon: i-simple-icons-github
+      target: _blank
+      title: Landing
+      to: https://github.com/nuxt-ui-templates/landing
+      ---
+      A landing page you can use as starting point.
+      :::::
+    ::::
+  :::
+
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+  ```mdc
+  :::card-group
+
+    ::card
+    ---
+    title: Dashboard
+    icon: i-simple-icons-github
+    to: https://github.com/nuxt-ui-templates/dashboard
+    target: _blank
+    ---
+    A dashboard with multi-column layout.
+    ::
+
+    ::card
+    ---
+    title: SaaS
+    icon: i-simple-icons-github
+    to: https://github.com/nuxt-ui-templates/saas
+    target: _blank
+    ---
+    A template with landing, pricing, docs and blog.
+    ::
+
+    ::card
+    ---
+    title: Docs
+    icon: i-simple-icons-github
+    to: https://github.com/nuxt-ui-templates/docs
+    target: _blank
+    ---
+    A documentation with `@nuxt/content`.
+    ::
+
+    ::card
+    ---
+    title: Landing
+    icon: i-simple-icons-github
+    to: https://github.com/nuxt-ui-templates/landing
+    target: _blank
+    ---
+    A landing page you can use as starting point.
+    ::
+
+  :::
+  ```
+  :::
+::
+
+### `Collapsible`
+
+Wrap your content with the `collapsible` component to display a [Collapsible](https://ui.nuxt.com/components/collapsible){rel="&#x22;nofollow&#x22;"} in your content.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::collapsible
+    | Prop    | Default   | Type     |
+    | ------- | --------- | -------- |
+    | `name`  |           | `string` |
+    | `size`  | `md`      | `string` |
+    | `color` | `neutral` | `string` |
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::collapsible
+
+  | Prop    | Default   | Type                     |
+  |---------|-----------|--------------------------|
+  | `name`  |           | `string`{lang="ts-type"} |
+  | `size`  | `md`      | `string`{lang="ts-type"} |
+  | `color` | `neutral` | `string`{lang="ts-type"} |
+
+  ::
+  ```
+  :::
+::
+
+### `Field` and `FieldGroup`
+
+A `field`is a prop or parameter to display in your content. You can group them by `field-group` in a list.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::field-group{.my-0}
+      :::::field{name="analytics" type="boolean"}
+      Default to 
+
+      `false`
+
+       \- Enables analytics for your project (coming soon).
+      :::::
+
+      :::::field{name="blob" type="boolean"}
+      Default to 
+
+      `false`
+
+       \- Enables blob storage to store static assets, such as images, videos and more.
+      :::::
+
+      :::::field{name="cache" type="boolean"}
+      Default to 
+
+      `false`
+
+       \- Enables cache storage to cache your server route responses or functions using Nitro's 
+
+      `cachedEventHandler`
+
+       and 
+
+      `cachedFunction`
+      :::::
+
+      :::::field{name="database" type="boolean"}
+      Default to 
+
+      `false`
+
+       \- Enables SQL database to store your application's data.
+      :::::
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::field-group
+    ::field{name="analytics" type="boolean"}
+      Default to `false` - Enables analytics for your project (coming soon).
+    ::
+
+    ::field{name="blob" type="boolean"}
+      Default to `false` - Enables blob storage to store static assets, such as images, videos and more.
+    ::
+
+    ::field{name="cache" type="boolean"}
+      Default to `false` - Enables cache storage to cache your server route responses or functions using Nitro's `cachedEventHandler` and `cachedFunction`
+    ::
+
+    ::field{name="database" type="boolean"}
+      Default to `false` - Enables SQL database to store your application's data.
+    ::
+  ::
+  ```
+  :::
+::
+
+### `Icon`
+
+Use the `icon` component to display an [Icon](https://ui.nuxt.com/components/icon){rel="&#x22;nofollow&#x22;"} in your content.
+
+::code-preview
+:icon{name="i-simple-icons-nuxtdotjs"}
+
+#code
+```mdc
+:icon{name="i-simple-icons-nuxtdotjs"}
+```
+::
+
+### `Kbd`
+
+Use the `kbd` component to display a [Kbd](https://ui.nuxt.com/components/kbd){rel="&#x22;nofollow&#x22;"} in your content.
+
+::code-preview
+#code
+```mdc
+:kbd{value="meta"} :kbd{value="K"}
+```
+::
+
+### `Tabs`
+
+Use the `tabs` and `tabs-item` components to display [Tabs](https://ui.nuxt.com/components/tabs){rel="&#x22;nofollow&#x22;"} in your content.
+
+::code-preview
+  :::tabs{.w-full}
+    ::::tabs-item{icon="i-lucide-code" label="Code"}
+    ```mdc
+    ::callout
+    Lorem velit voluptate ex reprehenderit ullamco et culpa.
+    ::
+    ```
+    ::::
+
+    ::::tabs-item{icon="i-lucide-eye" label="Preview"}
+      :::::callout
+      Lorem velit voluptate ex reprehenderit ullamco et culpa.
+      :::::
+    ::::
+  :::
+
+#code
+````mdc
+::tabs{.w-full}
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+    ```mdc
+    ::::callout
+    Lorem velit voluptate ex reprehenderit ullamco et culpa.
+    ::::
+    ```
+  ::::
+
+  :::tabs-item{icon="i-lucide-eye" label="Preview"}
+    :::::callout
+    Lorem velit voluptate ex reprehenderit ullamco et culpa.
+    :::::
+  :::
+::
+````
+::
+
+### `Steps`
+
+Wrap your headings with the Steps component to display a list of steps.
+
+Use the `level` prop to define which heading will be used for the steps.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::steps{level="4"}
+    #### Start a fresh new project
+
+    ```bash [Terminal]
+    npm create nuxt@latest -- -t github:nuxt-content/docus
+    ```
+
+    #### Run docus CLI to run your dev server
+
+    ```bash [Terminal]
+    docus dev
+    ```
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ````mdc
+  ::steps{level="4"}
+    #### Start a fresh new project
+    
+    ```bash [Terminal]
+    npm create nuxt@latest -- -t github:nuxt-content/docus
+    ```
+    
+    #### Run docus CLI to run your dev server
+    
+    ```bash [Terminal]
+    docus dev
+    ```
+  ::
+  ````
+  :::
+::
+
+
+# Images and Embeds
+
+## Markdown
+
+Display images or videos using standard Markdown syntax.
+
+### Images
+
+::code-preview
+![Nuxt Social Image](https://nuxt.com/new-social.jpg)
+
+#code
+```mdc
+![Nuxt Social Image](https://nuxt.com/new-social.jpg)
+```
+::
+
+Or with your local images
+
+::code-preview
+![Snow-capped mountains in a sea of clouds at sunset](https://MEA-RUN.github.io/mountains.webp)
+
+#code
+```mdc
+![Snow-capped mountains in a sea of clouds at sunset](/mountains.webp)
+```
+::
+
+::note{to="https://image.nuxt.com/"}
+Docus will use 
+
+`<NuxtImg>`
+
+ component under the hood instead of the native 
+
+`img`
+
+ tag.
+::
+
+### Videos
+
+::prose-code-preview
+:video{autoplay controls loop src="https://res.cloudinary.com/dcrl8q2g3/video/upload/v1745404403/landing_od8epr.mp4"}
+
+#code
+```mdc
+:video{autoplay controls loop src="https://res.cloudinary.com/dcrl8q2g3/video/upload/v1745404403/landing_od8epr.mp4"}
+```
+::
+
+###
+
+
+# Match the Shape Tutorial
+
+Welcome to the interactive Python tutorial! This lesson uses the **Match the Shape** game to teach you fundamental programming concepts.
+
+::prose-note
+The interactive tool will open automatically in the right panel. Use it to practice the concepts as you learn!
+::
+
+## What You'll Learn
+
+In this tutorial, you'll master:
+
+- **Variables** - Storing and naming objects
+- **Objects** - Understanding object-oriented programming
+- **Methods** - Calling functions on objects
+- **Sequences** - Understanding execution order
+- **Method Chaining** - Combining multiple operations
+
+## Getting Started
+
+The Match the Shape game is an interactive Python environment where you control shapes on a grid using Python code.
+
+### Creating Your First Shape
+
+Let's create a simple square:
+
+```python
+s = shape.Square("red")
+```
+
+This creates a red square and stores it in the variable `s`.
+
+### Positioning the Shape
+
+Now let's place it on the grid:
+
+```python
+s.set_position(2, 3)
+```
+
+This puts the square at coordinates (2, 3) on the grid.
+
+### Moving the Shape
+
+You can move shapes using directional commands:
+
+```python
+s.forward(2)  # Move 2 spaces forward
+s.right()     # Rotate 90° to the right
+s.forward(1)  # Move 1 space forward
+```
+
+## Your First Challenge
+
+Try this complete example in the tool on the right:
+
+```python
+# Create a blue circle
+c = shape.Circle("blue")
+
+# Position it at the starting point
+c.set_position(1, 1)
+
+# Move it to the destination
+c.forward(3)
+c.right()
+c.forward(2)
+```
+
+::prose-tip
+Watch how the shape moves on the grid as you execute your code!
+::
+
+\:::tools match
+🎮 Open Interactive Game
+\:::
+
+## Advanced Techniques
+
+### Method Chaining
+
+You can chain multiple methods together:
+
+```python
+s = shape.Square("green")
+s.set_position(0, 0).forward(2).right().forward(1)
+```
+
+### Working with Multiple Shapes
+
+Create and control multiple shapes:
+
+```python
+s1 = shape.Square("red")
+s2 = shape.Circle("blue")
+s3 = shape.Triangle("green")
+
+s1.set_position(0, 0)
+s2.set_position(1, 0)
+s3.set_position(2, 0)
+```
+
+## Practice Exercises
+
+Use the tool to complete these challenges:
+
+1. **Beginner**: Create one shape and move it to its destination
+2. **Intermediate**: Control 2 shapes simultaneously
+3. **Advanced**: Master all 4 shapes and reach all destinations!
+
+::prose-warning
+Remember: Each shape must have a unique combination of type and color!
+::
+
+## Tips for Success
+
+- Plan your path before writing code
+- Use the grid coordinates to calculate moves
+- Rotate before moving in a new direction
+- Test your code one shape at a time
+
+## Next Steps
+
+Once you've mastered the basics, try:
+
+- Creating complex paths with multiple turns
+- Optimizing your code to use fewer commands
+- Using method chaining for cleaner code
+- Exploring different shape and color combinations
+
+Happy coding! 🎮🐍
+
+
+# Interactive Tools Demo
+
+This page demonstrates how to use the `:::tools` component to embed interactive tool buttons directly in your content.
+
+## What are Tool Buttons?
+
+Tool buttons allow you to create clickable buttons in your markdown that open specific interactive tools in the side panel. This is perfect for:
+
+- Providing direct access to exercises
+- Creating interactive learning experiences
+- Offering hands-on practice opportunities
+- Enhancing engagement with your content
+
+## Basic Example
+
+Here's a simple button that opens the Match the Shape game:
+
+::tools{#match}
+🎮 Open Match the Shape Game
+::
+
+Click the button above to see it in action!
+
+## How It Works
+
+When you click a tool button:
+
+1. The side panel opens automatically (if not already open)
+2. The specified tool loads in the panel
+3. You can interact with the tool while reading the content
+4. The tool stays open as you navigate (until you close it)
+
+## Use Cases
+
+### 1. Practice Sections
+
+After explaining a concept, provide immediate practice:
+
+**Example: Python Variables**
+
+Variables in Python are like labeled boxes that store values:
+
+```python
+# Create a variable
+name = "Alice"
+age = 25
+```
+
+Now try it yourself:
+
+::tools{#match}
+Try Creating Variables
+::
+
+### 2. Multiple Tools
+
+You can include multiple tool buttons for different exercises:
+
+::tools{#match}
+🐍 Python Exercise
+::
+
+::tools{#code-editor}
+💻 Code Editor
+::
+
+::tools{#quiz}
+📝 Take Quiz
+::
+
+### 3. Inline with Content
+
+Tool buttons work great inline with your explanations:
+
+**Step 1**: Read the instructions
+**Step 2**: Click the button → :::tools{id="match"}
+Start Exercise
+\:::
+**Step 3**: Complete the challenge
+
+## Advanced Usage
+
+### Custom Button Text
+
+You can customize the button text to match your content:
+
+\:::tools match
+🚀 Launch Interactive Tutorial
+\:::
+
+\:::tools match
+Begin Shape Challenge
+\:::
+
+\:::tools match
+Practice Now
+\:::
+
+### With Callouts
+
+Combine with other MDC components:
+
+::prose-note
+Before starting, make sure you understand the basics of Python syntax.
+
+\:::tools match
+Open Practice Environment
+\:::
+::
+
+::prose-tip
+**Pro Tip**: Try to solve the puzzle with the minimum number of moves!
+
+\:::tools match
+Start Challenge
+\:::
+::
+
+### In Lists
+
+You can even use them in lists:
+
+1. Read the lesson content
+2. :tools[Open the interactive tool]{#match}
+3. Complete the exercises
+4. Move to the next lesson
+
+## Best Practices
+
+### ✅ Do:
+
+- Use descriptive button text
+- Place buttons near relevant content
+- Include emojis for visual appeal
+- Test that tool IDs are correct
+
+### ❌ Don't:
+
+- Use too many buttons on one page
+- Use vague text like "Click here"
+- Reference non-existent tools
+- Place buttons in headings
+
+## Styling Examples
+
+### Primary Action
+
+\:::tools match
+🎯 Start Main Exercise
+\:::
+
+### Secondary Action
+
+\:::tools quiz
+📊 Optional Quiz
+\:::
+
+### With Icons
+
+\:::tools match
+🎮 Game Mode
+\:::
+
+\:::tools code-editor
+⌨️ Editor Mode
+\:::
+
+\:::tools quiz
+✏️ Test Mode
+\:::
+
+## Error Handling
+
+If you specify a tool ID that doesn't exist, the button will show an error:
+
+\:::tools non-existent-tool
+This Won't Work
+\:::
+
+The error message helps you identify invalid tool IDs during development.
+
+## Comparison with Frontmatter
+
+There are two ways to use tools:
+
+### Frontmatter (Page-Level)
+
+```markdown
+---
+tool: match
+---
+```
+
+- Opens automatically when page loads
+- One tool per page
+- Suited for dedicated tutorial pages
+
+### Tool Buttons (Inline)
+
+```markdown
+:::tools match
+Open Tool
+:::
+```
+
+- Opens on button click
+- Multiple tools per page
+- Suited for reference pages with multiple examples
+
+You can use both together!
+
+## Complete Example
+
+Here's a complete lesson using tool buttons:
+
+---
+
+### Lesson: Python Movement Commands
+
+In this lesson, you'll learn how to move objects using Python code.
+
+**Concept**: The `forward()` method moves an object in its current direction.
+
+```python
+shape.forward(3)  # Move 3 spaces
+```
+
+\:::tools match
+🎮 Try Forward Movement
+\:::
+
+**Concept**: The `right()` method rotates an object 90° clockwise.
+
+```python
+shape.right()  # Rotate right
+```
+
+\:::tools match
+🎮 Try Rotation
+\:::
+
+**Challenge**: Combine both to navigate a path!
+
+\:::tools match
+🚀 Complete Challenge
+\:::
+
+---
+
+## Summary
+
+The `:::tools` component is a powerful way to create interactive, engaging documentation. Use it to:
+
+- ✅ Provide hands-on practice
+- ✅ Create interactive tutorials
+- ✅ Offer multiple learning tools
+- ✅ Enhance user engagement
+
+Happy teaching! 🎓
+
+
+# Mermaid Diagrams Test
+
+This page demonstrates how to use Mermaid diagrams in your markdown content.
+
+## Simple Flowchart
+
+```mermaid
+graph TD
+    A[Start] --> B{Is it working?}
+    B -->|Yes| C[Great!]
+    B -->|No| D[Debug]
+    D --> B
+    C --> E[End]
+```
+
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Server
+    User->>Browser: Click button
+    Browser->>Server: Send request
+    Server-->>Browser: Return data
+    Browser-->>User: Display result
+```
+
+## Class Diagram
+
+```mermaid
+classDiagram
+    class Animal {
+        +String name
+        +int age
+        +eat()
+        +sleep()
+    }
+    class Dog {
+        +String breed
+        +bark()
+    }
+    class Cat {
+        +String color
+        +meow()
+    }
+    Animal <|-- Dog
+    Animal <|-- Cat
+```
+
+## Regular Code Block (for comparison)
+
+```javascript
+// This is regular JavaScript code
+function hello() {
+  console.log('Hello, world!')
+}
+```
+
+
+# Manta Epitech Academy - Learn, Build, Innovate
+
+::u-page-hero
+#title
+Manta Epitech Academy
+
+#description
+Your comprehensive learning platform for modern development.
+
+Access interactive tools, tutorials, and resources designed to help you master technology and build innovative solutions.
+
+#links
+  :::u-button
+  ---
+  color: neutral
+  size: xl
+  to: https://MEA-RUN.github.io/getting-started/introduction
+  trailing-icon: i-lucide-arrow-right
+  ---
+  Get started
+  :::
+
+  :::u-button
+  ---
+  color: neutral
+  icon: i-lucide-book-open
+  size: xl
+  to: https://MEA-RUN.github.io/essentials/tools-component-demo
+  variant: outline
+  ---
+  Explore Tools
+  :::
+::
+
+::u-page-section
+#title
+Everything You Need to Learn and Build
+
+#features
+  :::u-page-feature
+  ---
+  icon: i-lucide-graduation-cap
+  ---
+  #title
+  [Comprehensive Tutorials]{.text-primary}
+
+  #description
+  Step-by-step guides and tutorials designed to take you from beginner to expert. Learn at your own pace with clear explanations and practical examples.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-wrench
+  ---
+  #title
+  [Interactive Tools]{.text-primary}
+
+  #description
+  Access a collection of interactive educational tools directly in your browser. Practice concepts, test your knowledge, and experiment with real implementations.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-code
+  ---
+  #title
+  [Code Examples]{.text-primary}
+
+  #description
+  Explore well-documented code samples across multiple programming languages. All examples include syntax highlighting and detailed explanations to help you understand best practices.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-chart-network
+  ---
+  #title
+  [Visual Diagrams]{.text-primary}
+
+  #description
+  Complex concepts made simple with Mermaid diagrams and visual representations. Understand architecture, workflows, and relationships at a glance.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-smartphone
+  ---
+  #title
+  [Mobile Responsive]{.text-primary}
+
+  #description
+  Learn anywhere, anytime. The platform is fully responsive and optimized for all devices, from desktop to mobile, ensuring a seamless learning experience.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-search
+  ---
+  #title
+  [Full-Text Search]{.text-primary}
+
+  #description
+  Quickly find the information you need with built-in search functionality. Navigate through documentation, tutorials, and tools with ease.
+  :::
+::
+
+
+# Introduction
+
+Welcome to **Docus**, a fully integrated documentation solution built with [Nuxt UI](https://ui.nuxt.com){rel="&#x22;nofollow&#x22;"}.
+
+## What is Docus?
+
+Docus is a theme based on the [UI documentation template](https://docs-template.nuxt.dev/){rel="&#x22;nofollow&#x22;"}. While the visual style comes ready out of the box, your focus should be on writing content using the Markdown and [MDC syntax](https://content.nuxt.com/docs/files/markdown#mdc-syntax){rel="&#x22;nofollow&#x22;"} provided by [Nuxt Content](https://content.nuxt.com){rel="&#x22;nofollow&#x22;"}.
+
+We use this theme across all our Nuxt module documentations, including:
+
+::card-group
+  :::card
+  ---
+  icon: i-simple-icons-nuxtdotjs
+  target: _blank
+  title: Nuxt Image
+  to: https://image.nuxt.com
+  ---
+  The documentation of 
+
+  `@nuxt/image`
+  :::
+
+  :::card
+  ---
+  icon: i-simple-icons-nuxtdotjs
+  target: _blank
+  title: Nuxt Supabase
+  to: https://supabase.nuxtjs.org
+  ---
+  The documentation of 
+
+  `@nuxt/supabase`
+  :::
+::
+
+## Key Features
+
+This theme includes a range of features designed to improve documentation management:
+
+- **Powered by** [**Nuxt 4**](https://nuxt.com){rel="&#x22;nofollow&#x22;"}: Utilizes the latest Nuxt framework for optimal performance.
+- **Built with** [**Nuxt UI**](https://ui.nuxt.com){rel="&#x22;nofollow&#x22;"}: Integrates a comprehensive suite of UI components.
+- [**MDC Syntax**](https://content.nuxt.com/usage/markdown){rel="&#x22;nofollow&#x22;"} **via** [**Nuxt Content**](https://content.nuxt.com){rel="&#x22;nofollow&#x22;"}: Supports Markdown with component integration for dynamic content.
+- [**Nuxt Studio**](https://content.nuxt.com/docs/studio){rel="&#x22;nofollow&#x22;"} **Compatible**: Write and edit your content visually. No Markdown knowledge is required!
+- **Auto-generated Sidebar Navigation**: Automatically generates navigation from content structure.
+- **Full-Text Search**: Includes built-in search functionality for content discovery.
+- **Optimized Typography**: Features refined typography for enhanced readability.
+- **Dark Mode**: Offers dark mode support for user preference.
+- **Extensive Functionality**: Explore the theme to fully appreciate its capabilities.
+
+
+# Installation
+
+## Local development
+
+::steps
+### Create your docs directory
+
+Use the `docus` CLI to create a new Docus project in the `docs/` directory:
+
+```bash [Terminal]
+npx docus init docs
+```
+
+We recommend using the `npm` package manager.
+
+### Start your docs server in development
+
+Move to the `docs/` directory and start your docs server in development mode:
+
+```bash [Terminal]
+npm run dev
+```
+
+A local preview of your documentation will be available at <http://localhost:4000>{rel=""nofollow""}
+
+### Write your documentation
+
+Head over the [Edition](https://docus.dev/concepts/edition){rel=""nofollow""} section to learn how to write your documentation.
+::
+
+## Online Edition with Nuxt Studio
+
+::prose-steps
+### Create a new project on Nuxt Studio
+
+Choose `Start from a template` and select **Docus.** Clone it on your GitHub personal account or any organisation of your choice.
+
+### Deploy in one click
+
+Once your project has been created and you're in the project dashboard, navigate to the `Deploy` section, choose the `GitHub Pages` tab then click on the **Deploy** button.
+
+  :::prose-note
+  ---
+  to: https://content.nuxt.com/docs/studio/setup#enable-the-full-editing-experience
+  ---
+  This is a one click static deployment available with 
+
+  [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site){rel=""nofollow""}
+
+   but you can also handle deployment yourself and use the 
+
+  `Selfhosted`
+
+   tab.
+  :::
+
+### Write your documentation in the editor
+
+Once the deployment is achieved, you'll be able to display the preview of your documentation. You can browse your content pages to edit them or create new ones.
+
+:video{controls loop poster="https://res.cloudinary.com/nuxt/video/upload/v1747230893/studio/wzt9zfmdvk7hgmdx3cnt.jpg" src="https://res.cloudinary.com/nuxt/video/upload/v1747230893/studio/wzt9zfmdvk7hgmdx3cnt.mp4"}
+::
+
+
+# Project Structure
+
+Docus provides a ready-to-use [documentation website starter](https://github.com/nuxt-content/docus/tree/.starter){rel="&#x22;nofollow&#x22;"}.
+
+This is the minimal directory structure to get an up and running Docus website.
+
+```bash
+content/
+  index.md
+public/
+  favicon.ico
+package.json
+```
+
+### `content/` directory
+
+This is where you [write pages](https://docus.dev/concepts/edition){rel="&#x22;nofollow&#x22;"} in Markdown.
+
+### `public/` directory
+
+Files contained within the `public/` directory are served at the root and are not modified by the build process of your documentation. This is where you can locate your medias.
+
+### `package.json`
+
+This file contains all the dependencies and scripts for your application. The `package.json` of a Docus application si really minimal and looks like:
+
+```json [package.json]
+{
+  "name": "docus-starter",
+  "scripts": {
+    "dev": "docus dev",
+    "build": "docus build"
+  },
+  "devDependencies": {
+    "docus": "latest"
+  }
+}
+```
+
+### `app.config.ts`
+
+*This file is not mandatory to start a Docus application.*
+
+This is where you can [configure Docus](https://docus.dev/concepts/configuration){rel="&#x22;nofollow&#x22;"} to fit your branding, handle SEO and adapt links and socials.
+
+::prose-tip{to="https://docus.dev/concepts/nuxt"}
+Docus uses a layer system, you can go further and use any feature or file of a classical Nuxt project from 
+
+`nuxt.config.ts`
+
+ to 
+
+`app/components`
+
+ or 
+
+`server/`
+
+ directory.
+::
+
+
+# Web Editor
+
+## **Introduction**
+
+The [Nuxt Studio](https://nuxt.studio){rel="&#x22;nofollow&#x22;"} **web editor** is a browser-based visual interface for creating, editing, and reviewing your documentation. It provides a preview experience while keeping your work in sync with your Git repository.
+
+:video{controls loop src="https://res.cloudinary.com/nuxt/video/upload/v1747230893/studio/wzt9zfmdvk7hgmdx3cnt.mp4"}
+
+::prose-tip{to="https://content.nuxt.com/studio"}
+Learn more about Nuxt Studio in the Nuxt Content documentation.
+::
+
+## **Web Editor vs. CLI**
+
+The **web editor** of [Nuxt Studio](https://nuxt.studio){rel="&#x22;nofollow&#x22;"} allows you to manage your documentation entirely from your browser. There is no need for local development tools or terminal commands. It’s ideal for maintaining your docs in one centralised place, with an easy tool without any Markdown skills required.
+
+The &#x2A;*CLI (Command Line Interface)**, on the other hand, is a local tool designed for developers who prefer working in their own IDE.
+
+::prose-note
+Both tools are fully integrated with Git, so you can switch between them as needed. Team members can choose whichever method suits their workflow best.
+::
+
+## **Two distinct editors**
+
+Nuxt Studio offers a versatile workspace for both developers and content writers, giving them the freedom to choose between two distinct editors for content creation and management: the **Markdown editor** and the **Visual editor**.
+
+You can select your favorite editor from the settings page of your project.
+
+::prose-note
+Each editor serves its own purpose, some users are used to Markdown edition, while others prefer a non-technical, visual approach. At the end, 
+
+**Markdown syntax is the final output**
+
+ for both editors.
+::
+
+## **Markdown editor**
+
+The Markdown editor in Nuxt Studio provides full control over your content, allowing you to write directly you documentation in **Markdown** and integrate Vue components with the [MDC syntax](https://content.nuxt.com/docs/files/markdown#mdc-syntax){rel="&#x22;nofollow&#x22;"}.
+
+When your file is saved with the Markdown editor, the content is stored exactly as you've written it, preserving all specific syntax and formatting. This editor is ideal for users comfortable with Markdown who want precise control over the layout and structure of their content.
+
+## **Visual editor**
+
+The Nuxt Studio editor is heavily inspired by Notion, well known for its intuitive design and flexibility. Much like a standard text editor, the Studio editor is designed to be familiar and easy to use.
+
+However, it stands out with its additional features that improve the writing experience:
+
+### **Toolbar**
+
+Highlight your text to reveal the toolbar, giving you access to all the standard text editing features provided by the [Markdown syntax](https://MEA-RUN.github.io/essentials/markdown-syntax):
+
+- Title formatting
+- Bold
+- Italic
+- Strike-through
+- Code
+- Link
+- Class
+- Bullet list
+- Numerated list
+
+### **The** `/` **shortcut**
+
+Simply type `/` anywhere in the editor to access all Studio features.
+
+#### **Formatting features**
+
+- Title formatting
+- Line break
+- Horizontal rule
+- Code-block
+- Paragraph
+- Bold & italic
+
+#### **Components**
+
+One of Studio's standout features is its ability to integrate and customize any complex component directly within the editor.
+
+In other terms, all [Nuxt UI components](https://MEA-RUN.github.io/essentials/components) are usable and can be integrated directly from the editor. An editor can also tweak the component properties, slots and styles.
+
+::prose-note
+You can also create custom components and let the user integrate them from the visual editor.
+::
+
+Just type `/` to access the list of all the components available.
+
+#### **Images**
+
+Using the `/`shortcut, you can quickly insert an image by selecting the `Image` option. A modal will open to let you choose the media you want to insert.
+
+From the media modal, you can set the **alt attribute** for SEO and accessibility purpose.
+
+#### **Videos**
+
+Using the `/` shortcut, you can quickly insert a video by selecting the `Video` choice and filling up the Video URL.
+
+As soon as a video is added, a tab will automatically open with all the props field **available by default**, for you to fill out the URL and customize your media.
+
+## **Live Preview**
+
+Once your documentation is deployed, it provides a live preview feature that lets you instantly see updates to your project.
+
+We're using your production website to override contents and display the new visual. This is why we need the URL to be set in the **deploy** section.
+
+When you are editing your website with Studio, the live preview can be displayed on the right part of your screen. You get an instant feedback when typing. It syncs the preview based on your draft updates.
+
+## **Making Changes**
+
+To edit your documentation:
+
+1. **Browse files** using the file explorer.
+2. **Open a file** by clicking on it.
+3. **Edit content** in either visual or Markdown mode. All edits are automatically saved as drafts.
+4. **Preview your changes** to see how they’ll appear when published.
+
+## **Publishing Changes**
+
+When you’re ready to publish:
+
+- Click the **Publish** button in the top-right corner of the editor.
+- Your changes will be pushed directly to your deployment branch and go live immediately.
+
+
+# Migration
+
+## **Migrating to Docus**
+
+Already using a Markdown-based solution for your documentation? Whether it’s **Docus v1**, the **Nuxt UI docs template**, or another static site setup, migrating to Docus is simple and straightforward.
+
+Docus offers a clean and maintainable solution with a single dependency: the Docus library itself. There’s no need to manage multiple dependencies. With everything built-in and maintained together, keeping your documentation up to date is easier than ever.
+
+To migrate, just move your existing Markdown files into the `content/` directory of the Docus starter.
+
+From there, you have two scenarios:
+
+- **If your current docs already use Nuxt Content and the MDC syntax**, make sure the components used in your content exist in Nuxt UI. If any components are missing, you can easily create your own custom ones.
+- **If you’re using standard Markdown**, you can copy your files as is. Then, enhance your documentation progressively using the [built-in components](https://docus.dev/essentials/components){rel="&#x22;nofollow&#x22;"} provided by Nuxt UI.
+
+Once your content has been moved to the `content/` folder, you can go through the [configuration section](https://docus.dev/concepts/configuration){rel="&#x22;nofollow&#x22;"} to easily customize your app.
+
+Docus is designed to focus on writing content, so if you're already using Markdown, you can easily switch to it.
+
+
+# Markdown Syntax
+
+## Titles
+
+Use titles to introduce main sections. They structure your documentation and help users navigate content.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+## Titles
+
+#code
+```mdc
+## Titles
+```
+::
+
+### Subtitles
+
+Use subtitles to divide sections further. They create a more detailed content hierarchy for better readability.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+### Subtitles
+
+#code
+```mdc
+### Subtitles
+```
+::
+
+::tip
+Each title and subtitle creates an anchor and shows up automatically in the table of contents.
+::
+
+## Text Formatting
+
+Docus supports most Markdown formatting options.
+
+| Style  | How to use   | Result     |
+| ------ | ------------ | ---------- |
+| Bold   | `**bold**`   | **Bold**   |
+| Italic | `*italic*`   | *Italic*   |
+| Strike | `~~strike~~` | ~~Strike~~ |
+
+Combine formatting for richer text styles and visual emphasis.
+
+| Style         | How to use          | Result            |
+| ------------- | ------------------- | ----------------- |
+| Bold Italic   | `**_bold italic_**` | ***Bold Italic*** |
+| Bold Strike   | `~~**bold**~~`      | ~~**Bold**~~      |
+| Italic Strike | `~~*italic*~~`      | ~~*Italic*~~      |
+
+## Links
+
+Links connect different parts of your documentation and external resources, essential for user navigation and providing references.
+To create a link, wrap the link text in brackets `[]()`.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+[Nuxt UI](https://ui.nuxt.com/getting-started/installation/nuxt){rel=""nofollow""}
+
+#code
+```mdc
+[Nuxt UI](https://ui.nuxt.com/getting-started/installation/nuxt)
+```
+::
+
+### Internal links
+
+For linking within your documentation, use root-relative paths like `/getting-started/installation`.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+[Installation](https://MEA-RUN.github.io/getting-started/installation)
+
+#code
+```mdc
+[Installation](/getting-started/installation)
+```
+::
+
+## Lists
+
+Organize related items in a structured, readable format. Markdown supports unordered, ordered, and nested lists for various content needs.
+
+### Unordered
+
+Use unordered lists for items without a specific sequence. Start each item with a `-` symbol.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+- I'm a list item.
+- I'm another list item.
+- I'm the last list item.
+
+#code
+```mdc
+- I'm a list item.
+- I'm another list item.
+- I'm the last list item.
+```
+::
+
+### Ordered
+
+Use ordered lists when item order matters, like steps in a process. Start each item with a number.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+1. I'm a list item.
+2. I'm another list item.
+3. I'm the last list item.
+
+#code
+```mdc
+1. I'm a list item.
+2. I'm another list item.
+3. I'm the last list item.
+```
+::
+
+### Nested
+
+Create hierarchical lists with sub-items for complex structures. Indent sub-items by four spaces for nesting.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+- I'm a list item.
+  - I'm a nested list item.
+  - I'm another nested list item.
+- I'm another list item.
+
+#code
+```mdc
+- I'm a list item.
+  - I'm a nested list item.
+  - I'm another nested list item.
+- I'm another list item.
+```
+::
+
+## Tables
+
+Present structured data in rows and columns clearly. Tables are ideal for comparing data or listing properties.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+| Prop    | Default   | Type     |
+| ------- | --------- | -------- |
+| `name`  |           | `string` |
+| `size`  | `md`      | `string` |
+| `color` | `neutral` | `string` |
+
+#code
+```mdc
+| Prop    | Default   | Type                     |
+|---------|-----------|--------------------------|
+| `name`  |           | `string`{lang="ts-type"} |
+| `size`  | `md`      | `string`{lang="ts-type"} |
+| `color` | `neutral` | `string`{lang="ts-type"} |
+```
+::
+
+## Blockquotes
+
+Highlight important quotations, citations, or emphasized text. Blockquotes visually distinguish quoted content.
+
+### Singleline
+
+Single-line blockquotes are best for short, impactful quotes or citations that fit within a single line. To create a single-line blockquote, add a `>` in front of a paragraph. Ideal for short and impactful quotes.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+> Nuxt UI is a collection of Vue components, composables and utils built on top of Reka UI, oriented on structure and layout and designed to be used as building blocks for your app.
+
+#code
+```mdc
+> Nuxt UI is a collection of Vue components, composables and utils built on top of Reka UI, oriented on structure and layout and designed to be used as building blocks for your app.
+```
+::
+
+### Multiline
+
+Multi-line blockquotes are suitable for longer quotes or when you need to include multiple paragraphs within a single quotation.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+> Nuxt UI is a collection of Vue components, composables and utils built on top of Reka UI, oriented on structure and layout and designed to be used as building blocks for your app.
+>
+> Create beautiful, responsive, and accessible Vue applications with Nuxt UI.
+
+#code
+```mdc
+> Nuxt UI is a collection of Vue components, composables and utils built on top of Reka UI, oriented on structure and layout and designed to be used as building blocks for your app.
+>
+> Create beautiful, responsive, and accessible Vue applications with Nuxt UI.
+```
+::
+
+
+# Code Blocks
+
+## Basic
+
+### Inline Code
+
+Use inline code to display code snippets within text paragraphs. It's ideal for referencing code elements directly in sentences.
+
+::code-preview
+---
+class: "[&>div]:*:my-0"
+---
+`inline code`
+
+#code
+```mdc
+`inline code`
+```
+::
+
+### Code Blocks
+
+Use code blocks to display multi-line code snippets with syntax highlighting. Code blocks are essential for presenting code examples clearly.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+```ts
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui']
+})
+```
+
+#code
+````mdc
+```ts
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui']
+})
+```
+````
+::
+
+When writing a code-block, you can specify a filename that will be displayed on top of the code block. An icon will be automatically displayed based on the extension or the name.
+Filenames help users understand the code's location and purpose within a project.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+```ts [nuxt.config.ts]
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui']
+})
+```
+
+#code
+````mdc
+```ts [nuxt.config.ts]
+export default defineNuxtConfig({
+  modules: ['@nuxt/ui']
+})
+```
+````
+::
+
+Every code-block has a built-in copy button that will copy the code to your clipboard.
+
+::tip{to="https://ui.nuxt.com/getting-started/icons/nuxt#theme"}
+Icons are already defined by default, but you can customize them in your `app.config.ts`:
+
+```ts [app.config.ts]
+export default defineAppConfig({
+  ui: {
+    prose: {
+      codeIcon: {
+        terminal: 'i-ph-terminal-window-duotone'
+      }
+    }
+  }
+})
+```
+::
+
+## Advanced
+
+### CodeGroup
+
+Group code blocks in tabs using `code-group`. `code-group` is perfect for showing code examples in multiple languages or package managers.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+  :::code-group{.w-full}
+  ```bash [pnpm]
+  pnpm add @nuxt/ui
+  ```
+
+  ```bash [yarn]
+  yarn add @nuxt/ui
+  ```
+
+  ```bash [npm]
+  npm install @nuxt/ui
+  ```
+
+  ```bash [bun]
+  bun add @nuxt/ui
+  ```
+  :::
+
+#code
+````mdc
+:::code-group
+
+```bash [pnpm]
+pnpm add @nuxt/ui
+```
+
+```bash [yarn]
+yarn add @nuxt/ui
+```
+
+```bash [npm]
+npm install @nuxt/ui
+```
+
+```bash [bun]
+bun add @nuxt/ui
+```
+
+::
+````
+::
+
+### CodeTree
+
+Display code blocks in a file tree view using `code-tree`. `code-tree` is excellent for showcasing project structures and file relationships.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+  :::code-tree{default-value="app/app.config.ts"}
+  ```ts [nuxt.config.ts]
+  export default defineNuxtConfig({
+    modules: ['@nuxt/ui'],
+
+    css: ['~/assets/css/main.css']
+  })
+
+  ```
+
+  ```css [app/assets/css/main.css]
+  @import "../../node_modules/tailwindcss";
+  @import "../../node_modules/@nuxt/ui";
+  ```
+
+  ```ts [app/app.config.ts]
+  export default defineAppConfig({
+    ui: {
+      colors: {
+        primary: 'sky',
+        colors: 'slate'
+      }
+    }
+  })
+  ```
+
+  ```vue [app/app.vue]
+  <template>
+    <UApp>
+      <NuxtPage />
+    </UApp>
+  </template>
+  ```
+
+  ```json [package.json]
+  {
+    "name": "nuxt-app",
+    "private": true,
+    "type": "module",
+    "scripts": {
+      "build": "nuxt build",
+      "dev": "nuxt dev",
+      "generate": "nuxt generate",
+      "preview": "nuxt preview",
+      "postinstall": "nuxt prepare",
+      "lint": "eslint .",
+      "lint:fix": "eslint --fix ."
+    },
+    "dependencies": {
+      "@iconify-json/lucide": "^1.2.18",
+      "@nuxt/ui": "4.0.0-alpha.1",
+      "nuxt": "^4.1.0"
+    },
+    "devDependencies": {
+      "eslint": "^9.34.0",
+      "typescript": "^5.9.3",
+      "vue-tsc": "^3.0.6"
+    }
+  }
+  ```
+
+  ```json [tsconfig.json]
+  {
+    "extends": "./.nuxt/tsconfig.json"
+  }
+  ```
+
+  ````md [README.md]
+  # Nuxt 4 Minimal Starter
+
+  Look at the [Nuxt 4 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+
+  ## Setup
+
+  Make sure to install the dependencies:
+
+  ```bash
+  # npm
+  npm install
+
+  # pnpm
+  pnpm install
+
+  # yarn
+  yarn install
+
+  # bun
+  bun install
+  ```
+
+  ## Development Server
+
+  Start the development server on `http://localhost:3000`:
+
+  ```bash
+  # npm
+  npm run dev
+
+  # pnpm
+  pnpm run dev
+
+  # yarn
+  yarn dev
+
+  # bun
+  bun run dev
+  ```
+
+  ## Production
+
+  Build the application for production:
+
+  ```bash
+  # npm
+  npm run build
+
+  # pnpm
+  pnpm run build
+
+  # yarn
+  yarn build
+
+  # bun
+  bun run build
+  ```
+
+  Locally preview production build:
+
+  ```bash
+  # npm
+  npm run preview
+
+  # pnpm
+  pnpm run preview
+
+  # yarn
+  yarn preview
+
+  # bun
+  bun run preview
+  ```
+
+  Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+  ````
+  :::
+::
+
+### `CodePreview`
+
+Use `code-preview` to show code output alongside the code. `code-preview` is ideal for interactive examples and demonstrating code results.
+Write the code to be previewed in a the `default` slot and the actual code in the `code` slot.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+label: Preview
+---
+  :::code-preview
+  ---
+  class: "[&>div]:*:my-0"
+  ---
+  `inline code`
+
+  #code
+  ```mdc
+  `inline code`
+  ```
+  :::
+
+#code
+````mdc
+::code-preview
+`inline code`
+
+#code
+```mdc
+`inline code`
+```
+::
+````
+::
+
+### `CodeCollapse`
+
+Use `code-collapse` for long code blocks to keep pages clean. `code-collapse` allows users to expand code blocks only when needed, improving readability.
+
+::code-preview
+---
+class: "[&>div]:*:my-0 [&>div]:*:w-full"
+---
+  :::code-collapse
+  ---
+  class: "[&>div]:my-0"
+  ---
+  ```css [main.css]
+  @import "tailwindcss";
+  @import "@nuxt/ui";
+
+  @theme {
+    --font-sans: 'Public Sans', sans-serif;
+
+    --breakpoint-3xl: 1920px;
+
+    --color-green-50: #EFFDF5;
+    --color-green-100: #D9FBE8;
+    --color-green-200: #B3F5D1;
+    --color-green-300: #75EDAE;
+    --color-green-400: #00DC82;
+    --color-green-500: #00C16A;
+    --color-green-600: #00A155;
+    --color-green-700: #007F45;
+    --color-green-800: #016538;
+    --color-green-900: #0A5331;
+    --color-green-950: #052E16;
+  }
+  ```
+  :::
+
+#code
+````mdc
+::code-collapse
+
+```css [main.css]
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+--font-sans: 'Public Sans', sans-serif;
+
+--breakpoint-3xl: 1920px;
+
+--color-green-50: #EFFDF5;
+--color-green-100: #D9FBE8;
+--color-green-200: #B3F5D1;
+--color-green-300: #75EDAE;
+--color-green-400: #00DC82;
+--color-green-500: #00C16A;
+--color-green-600: #00A155;
+--color-green-700: #007F45;
+--color-green-800: #016538;
+--color-green-900: #0A5331;
+--color-green-950: #052E16;
+}
+```
+
+::
+````
+::
+
+
+# Markdown Components
+
+Prose components are replacements for HTML typography tags. They provide a simple way to customize your UI when using Markdown.
+
+**Docus and Nuxt UI** provides a set of styled and beautiful prose components to help you write your documentation using the [MDC syntax](https://content.nuxt.com/docs/files/markdown#mdc-syntax){rel="&#x22;nofollow&#x22;"}.
+
+::prose-note{to="https://ui.nuxt.com/getting-started"}
+This page highlights only the prose components best suited for writing documentation. However, you can use 
+
+**any Nuxt UI component**
+
+ in your Markdown. For the full list of available components, visit the Nuxt UI documentation.
+::
+
+### `Accordion`
+
+Use the `accordion` and `accordion-item` components to display an [Accordion](https://ui.nuxt.com/components/accordion){rel="&#x22;nofollow&#x22;"} in your content.
+
+::tabs
+  :::tabs-item{icon="i-lucide-eye" label="Preview"}
+    ::::accordion
+      :::::accordion-item
+      ---
+      icon: i-lucide-circle-help
+      label: What is Docus and what are its key features??
+      ---
+      Docus is a fully integrated documentation solution built with Nuxt UI. It's a theme based on the UI documentation template that provides a ready-to-use visual. User can focus on content using Markdown and MDC syntax.
+      :::::
+
+      :::::accordion-item
+      ---
+      icon: i-lucide-circle-help
+      label: How do I get started with Docus?
+      ---
+      The only thing you need to start a Docus project is a 
+
+      `content/`
+
+       folder. You can have a check at the starter for a quick start.
+      :::::
+
+      :::::accordion-item{icon="i-lucide-circle-help" label="What is Nuxt UI?"}
+      [Nuxt UI](https://ui.nuxt.com/){rel=""nofollow""}
+
+       is a collection of premium Vue components, composables and utils.
+      :::::
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::accordion
+
+    :::accordion-item{label="What is Docus and what are its key features??" icon="i-lucide-circle-help"}
+    Docus is a fully integrated documentation solution built with Nuxt UI. It's a theme based on the UI documentation template that provides a ready-to-use visual. User can focus on content using Markdown and MDC syntax.
+    :::
+
+    :::accordion-item{label="How do I get started with Docus?" icon="i-lucide-circle-help"}
+    The only thing you need to start a Docus project is a `content/` folder. You can have a check at the starter for a quick start.
+    :::
+
+    :::accordion-item{label="What is Nuxt UI ?" icon="i-lucide-circle-help"}
+    [Nuxt UI](https://ui.nuxt.com/) is a collection of premium Vue components, composables and utils.
+    :::
+  ::
+  ```
+  :::
+::
+
+### `Badge`
+
+Use markdown in the default slot of the `badge` component to display a [Badge](https://ui.nuxt.com/components/badge){rel="&#x22;nofollow&#x22;"} in your content.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::badge
+    **v3.0.0**
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::badge
+  **v3.0.0**
+  ::
+  ```
+  :::
+::
+
+### `Callout`
+
+Use markdown in the default slot of the `callout` component to add eye-catching context to your content.
+
+Use the `icon` and `color` props to customize it. You can also pass any property from the [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link){rel="&#x22;nofollow&#x22;"} component.
+
+You can also use the `note`, `tip`, `warning` and `caution` shortcuts with pre-defined icons and colors.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::div{.flex.flex-col.gap-4.w-full}
+      :::::note{.w-full.my-0}
+      Here's some additional information for you.
+      :::::
+
+      :::::tip{.w-full.my-0}
+      Here's a helpful suggestion.
+      :::::
+
+      :::::warning{.w-full.my-0}
+      Be careful with this action as it might have unexpected results.
+      :::::
+
+      :::::caution{.w-full.my-0}
+      This action cannot be undone.
+      :::::
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::note
+  Here's some additional information.
+  ::
+
+  ::tip
+  Here's a helpful suggestion.
+  ::
+
+  ::warning
+  Be careful with this action as it might have unexpected results.
+  ::
+
+  ::caution
+  This action cannot be undone.
+  ::
+  ```
+  :::
+::
+
+### `Card` and `CardGroup`
+
+Use markdown in the default slot of the `card` component to highlight your content.
+
+Use the `title`, `icon` and `color` props to customize it. You can also pass any property from the [`<NuxtLink>`](https://nuxt.com/docs/api/components/nuxt-link){rel="&#x22;nofollow&#x22;"}.
+
+Wrap your `card` components with the `card-group` component to group them together in a grid layout.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::card-group{.w-full.my-0}
+      :::::card
+      ---
+      icon: i-simple-icons-github
+      target: _blank
+      title: Dashboard
+      to: https://github.com/nuxt-ui-templates/dashboard
+      ---
+      A dashboard with multi-column layout.
+      :::::
+
+      :::::card
+      ---
+      icon: i-simple-icons-github
+      target: _blank
+      title: SaaS
+      to: https://github.com/nuxt-ui-templates/saas
+      ---
+      A template with landing, pricing, docs and blog.
+      :::::
+
+      :::::card
+      ---
+      icon: i-simple-icons-github
+      target: _blank
+      title: Docs
+      to: https://github.com/nuxt-ui-templates/docs
+      ---
+      A documentation with 
+
+      `@nuxt/content`
+
+      .
+      :::::
+
+      :::::card
+      ---
+      icon: i-simple-icons-github
+      target: _blank
+      title: Landing
+      to: https://github.com/nuxt-ui-templates/landing
+      ---
+      A landing page you can use as starting point.
+      :::::
+    ::::
+  :::
+
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+  ```mdc
+  :::card-group
+
+    ::card
+    ---
+    title: Dashboard
+    icon: i-simple-icons-github
+    to: https://github.com/nuxt-ui-templates/dashboard
+    target: _blank
+    ---
+    A dashboard with multi-column layout.
+    ::
+
+    ::card
+    ---
+    title: SaaS
+    icon: i-simple-icons-github
+    to: https://github.com/nuxt-ui-templates/saas
+    target: _blank
+    ---
+    A template with landing, pricing, docs and blog.
+    ::
+
+    ::card
+    ---
+    title: Docs
+    icon: i-simple-icons-github
+    to: https://github.com/nuxt-ui-templates/docs
+    target: _blank
+    ---
+    A documentation with `@nuxt/content`.
+    ::
+
+    ::card
+    ---
+    title: Landing
+    icon: i-simple-icons-github
+    to: https://github.com/nuxt-ui-templates/landing
+    target: _blank
+    ---
+    A landing page you can use as starting point.
+    ::
+
+  :::
+  ```
+  :::
+::
+
+### `Collapsible`
+
+Wrap your content with the `collapsible` component to display a [Collapsible](https://ui.nuxt.com/components/collapsible){rel="&#x22;nofollow&#x22;"} in your content.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::collapsible
+    | Prop    | Default   | Type     |
+    | ------- | --------- | -------- |
+    | `name`  |           | `string` |
+    | `size`  | `md`      | `string` |
+    | `color` | `neutral` | `string` |
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::collapsible
+
+  | Prop    | Default   | Type                     |
+  |---------|-----------|--------------------------|
+  | `name`  |           | `string`{lang="ts-type"} |
+  | `size`  | `md`      | `string`{lang="ts-type"} |
+  | `color` | `neutral` | `string`{lang="ts-type"} |
+
+  ::
+  ```
+  :::
+::
+
+### `Field` and `FieldGroup`
+
+A `field`is a prop or parameter to display in your content. You can group them by `field-group` in a list.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::field-group{.my-0}
+      :::::field{name="analytics" type="boolean"}
+      Default to 
+
+      `false`
+
+       \- Enables analytics for your project (coming soon).
+      :::::
+
+      :::::field{name="blob" type="boolean"}
+      Default to 
+
+      `false`
+
+       \- Enables blob storage to store static assets, such as images, videos and more.
+      :::::
+
+      :::::field{name="cache" type="boolean"}
+      Default to 
+
+      `false`
+
+       \- Enables cache storage to cache your server route responses or functions using Nitro's 
+
+      `cachedEventHandler`
+
+       and 
+
+      `cachedFunction`
+      :::::
+
+      :::::field{name="database" type="boolean"}
+      Default to 
+
+      `false`
+
+       \- Enables SQL database to store your application's data.
+      :::::
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ```mdc
+  ::field-group
+    ::field{name="analytics" type="boolean"}
+      Default to `false` - Enables analytics for your project (coming soon).
+    ::
+
+    ::field{name="blob" type="boolean"}
+      Default to `false` - Enables blob storage to store static assets, such as images, videos and more.
+    ::
+
+    ::field{name="cache" type="boolean"}
+      Default to `false` - Enables cache storage to cache your server route responses or functions using Nitro's `cachedEventHandler` and `cachedFunction`
+    ::
+
+    ::field{name="database" type="boolean"}
+      Default to `false` - Enables SQL database to store your application's data.
+    ::
+  ::
+  ```
+  :::
+::
+
+### `Icon`
+
+Use the `icon` component to display an [Icon](https://ui.nuxt.com/components/icon){rel="&#x22;nofollow&#x22;"} in your content.
+
+::code-preview
+:icon{name="i-simple-icons-nuxtdotjs"}
+
+#code
+```mdc
+:icon{name="i-simple-icons-nuxtdotjs"}
+```
+::
+
+### `Kbd`
+
+Use the `kbd` component to display a [Kbd](https://ui.nuxt.com/components/kbd){rel="&#x22;nofollow&#x22;"} in your content.
+
+::code-preview
+#code
+```mdc
+:kbd{value="meta"} :kbd{value="K"}
+```
+::
+
+### `Tabs`
+
+Use the `tabs` and `tabs-item` components to display [Tabs](https://ui.nuxt.com/components/tabs){rel="&#x22;nofollow&#x22;"} in your content.
+
+::code-preview
+  :::tabs{.w-full}
+    ::::tabs-item{icon="i-lucide-code" label="Code"}
+    ```mdc
+    ::callout
+    Lorem velit voluptate ex reprehenderit ullamco et culpa.
+    ::
+    ```
+    ::::
+
+    ::::tabs-item{icon="i-lucide-eye" label="Preview"}
+      :::::callout
+      Lorem velit voluptate ex reprehenderit ullamco et culpa.
+      :::::
+    ::::
+  :::
+
+#code
+````mdc
+::tabs{.w-full}
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+    ```mdc
+    ::::callout
+    Lorem velit voluptate ex reprehenderit ullamco et culpa.
+    ::::
+    ```
+  ::::
+
+  :::tabs-item{icon="i-lucide-eye" label="Preview"}
+    :::::callout
+    Lorem velit voluptate ex reprehenderit ullamco et culpa.
+    :::::
+  :::
+::
+````
+::
+
+### `Steps`
+
+Wrap your headings with the Steps component to display a list of steps.
+
+Use the `level` prop to define which heading will be used for the steps.
+
+::tabs
+  :::tabs-item{.my-5 icon="i-lucide-eye" label="Preview"}
+    ::::steps{level="4"}
+    #### Start a fresh new project
+
+    ```bash [Terminal]
+    npm create nuxt@latest -- -t github:nuxt-content/docus
+    ```
+
+    #### Run docus CLI to run your dev server
+
+    ```bash [Terminal]
+    docus dev
+    ```
+    ::::
+  :::
+
+  :::tabs-item{icon="i-lucide-code" label="Code"}
+  ````mdc
+  ::steps{level="4"}
+    #### Start a fresh new project
+    
+    ```bash [Terminal]
+    npm create nuxt@latest -- -t github:nuxt-content/docus
+    ```
+    
+    #### Run docus CLI to run your dev server
+    
+    ```bash [Terminal]
+    docus dev
+    ```
+  ::
+  ````
+  :::
+::
+
+
+# Images and Embeds
+
+## Markdown
+
+Display images or videos using standard Markdown syntax.
+
+### Images
+
+::code-preview
+![Nuxt Social Image](https://nuxt.com/new-social.jpg)
+
+#code
+```mdc
+![Nuxt Social Image](https://nuxt.com/new-social.jpg)
+```
+::
+
+Or with your local images
+
+::code-preview
+![Snow-capped mountains in a sea of clouds at sunset](https://MEA-RUN.github.io/mountains.webp)
+
+#code
+```mdc
+![Snow-capped mountains in a sea of clouds at sunset](/mountains.webp)
+```
+::
+
+::note{to="https://image.nuxt.com/"}
+Docus will use 
+
+`<NuxtImg>`
+
+ component under the hood instead of the native 
+
+`img`
+
+ tag.
+::
+
+### Videos
+
+::prose-code-preview
+:video{autoplay controls loop src="https://res.cloudinary.com/dcrl8q2g3/video/upload/v1745404403/landing_od8epr.mp4"}
+
+#code
+```mdc
+:video{autoplay controls loop src="https://res.cloudinary.com/dcrl8q2g3/video/upload/v1745404403/landing_od8epr.mp4"}
+```
+::
+
+###
+
+
+# Match the Shape Tutorial
+
+Welcome to the interactive Python tutorial! This lesson uses the **Match the Shape** game to teach you fundamental programming concepts.
+
+::prose-note
+The interactive tool will open automatically in the right panel. Use it to practice the concepts as you learn!
+::
+
+## What You'll Learn
+
+In this tutorial, you'll master:
+
+- **Variables** - Storing and naming objects
+- **Objects** - Understanding object-oriented programming
+- **Methods** - Calling functions on objects
+- **Sequences** - Understanding execution order
+- **Method Chaining** - Combining multiple operations
+
+## Getting Started
+
+The Match the Shape game is an interactive Python environment where you control shapes on a grid using Python code.
+
+### Creating Your First Shape
+
+Let's create a simple square:
+
+```python
+s = shape.Square("red")
+```
+
+This creates a red square and stores it in the variable `s`.
+
+### Positioning the Shape
+
+Now let's place it on the grid:
+
+```python
+s.set_position(2, 3)
+```
+
+This puts the square at coordinates (2, 3) on the grid.
+
+### Moving the Shape
+
+You can move shapes using directional commands:
+
+```python
+s.forward(2)  # Move 2 spaces forward
+s.right()     # Rotate 90° to the right
+s.forward(1)  # Move 1 space forward
+```
+
+## Your First Challenge
+
+Try this complete example in the tool on the right:
+
+```python
+# Create a blue circle
+c = shape.Circle("blue")
+
+# Position it at the starting point
+c.set_position(1, 1)
+
+# Move it to the destination
+c.forward(3)
+c.right()
+c.forward(2)
+```
+
+::prose-tip
+Watch how the shape moves on the grid as you execute your code!
+::
+
+\:::tools match
+🎮 Open Interactive Game
+\:::
+
+## Advanced Techniques
+
+### Method Chaining
+
+You can chain multiple methods together:
+
+```python
+s = shape.Square("green")
+s.set_position(0, 0).forward(2).right().forward(1)
+```
+
+### Working with Multiple Shapes
+
+Create and control multiple shapes:
+
+```python
+s1 = shape.Square("red")
+s2 = shape.Circle("blue")
+s3 = shape.Triangle("green")
+
+s1.set_position(0, 0)
+s2.set_position(1, 0)
+s3.set_position(2, 0)
+```
+
+## Practice Exercises
+
+Use the tool to complete these challenges:
+
+1. **Beginner**: Create one shape and move it to its destination
+2. **Intermediate**: Control 2 shapes simultaneously
+3. **Advanced**: Master all 4 shapes and reach all destinations!
+
+::prose-warning
+Remember: Each shape must have a unique combination of type and color!
+::
+
+## Tips for Success
+
+- Plan your path before writing code
+- Use the grid coordinates to calculate moves
+- Rotate before moving in a new direction
+- Test your code one shape at a time
+
+## Next Steps
+
+Once you've mastered the basics, try:
+
+- Creating complex paths with multiple turns
+- Optimizing your code to use fewer commands
+- Using method chaining for cleaner code
+- Exploring different shape and color combinations
+
+Happy coding! 🎮🐍
+
+
+# Interactive Tools Demo
+
+This page demonstrates how to use the `:::tools` component to embed interactive tool buttons directly in your content.
+
+## What are Tool Buttons?
+
+Tool buttons allow you to create clickable buttons in your markdown that open specific interactive tools in the side panel. This is perfect for:
+
+- Providing direct access to exercises
+- Creating interactive learning experiences
+- Offering hands-on practice opportunities
+- Enhancing engagement with your content
+
+## Basic Example
+
+Here's a simple button that opens the Match the Shape game:
+
+::tools{#match}
+🎮 Open Match the Shape Game
+::
+
+Click the button above to see it in action!
+
+## How It Works
+
+When you click a tool button:
+
+1. The side panel opens automatically (if not already open)
+2. The specified tool loads in the panel
+3. You can interact with the tool while reading the content
+4. The tool stays open as you navigate (until you close it)
+
+## Use Cases
+
+### 1. Practice Sections
+
+After explaining a concept, provide immediate practice:
+
+**Example: Python Variables**
+
+Variables in Python are like labeled boxes that store values:
+
+```python
+# Create a variable
+name = "Alice"
+age = 25
+```
+
+Now try it yourself:
+
+::tools{#match}
+Try Creating Variables
+::
+
+### 2. Multiple Tools
+
+You can include multiple tool buttons for different exercises:
+
+::tools{#match}
+🐍 Python Exercise
+::
+
+::tools{#code-editor}
+💻 Code Editor
+::
+
+::tools{#quiz}
+📝 Take Quiz
+::
+
+### 3. Inline with Content
+
+Tool buttons work great inline with your explanations:
+
+**Step 1**: Read the instructions
+**Step 2**: Click the button → :::tools{id="match"}
+Start Exercise
+\:::
+**Step 3**: Complete the challenge
+
+## Advanced Usage
+
+### Custom Button Text
+
+You can customize the button text to match your content:
+
+\:::tools match
+🚀 Launch Interactive Tutorial
+\:::
+
+\:::tools match
+Begin Shape Challenge
+\:::
+
+\:::tools match
+Practice Now
+\:::
+
+### With Callouts
+
+Combine with other MDC components:
+
+::prose-note
+Before starting, make sure you understand the basics of Python syntax.
+
+\:::tools match
+Open Practice Environment
+\:::
+::
+
+::prose-tip
+**Pro Tip**: Try to solve the puzzle with the minimum number of moves!
+
+\:::tools match
+Start Challenge
+\:::
+::
+
+### In Lists
+
+You can even use them in lists:
+
+1. Read the lesson content
+2. :tools[Open the interactive tool]{#match}
+3. Complete the exercises
+4. Move to the next lesson
+
+## Best Practices
+
+### ✅ Do:
+
+- Use descriptive button text
+- Place buttons near relevant content
+- Include emojis for visual appeal
+- Test that tool IDs are correct
+
+### ❌ Don't:
+
+- Use too many buttons on one page
+- Use vague text like "Click here"
+- Reference non-existent tools
+- Place buttons in headings
+
+## Styling Examples
+
+### Primary Action
+
+\:::tools match
+🎯 Start Main Exercise
+\:::
+
+### Secondary Action
+
+\:::tools quiz
+📊 Optional Quiz
+\:::
+
+### With Icons
+
+\:::tools match
+🎮 Game Mode
+\:::
+
+\:::tools code-editor
+⌨️ Editor Mode
+\:::
+
+\:::tools quiz
+✏️ Test Mode
+\:::
+
+## Error Handling
+
+If you specify a tool ID that doesn't exist, the button will show an error:
+
+\:::tools non-existent-tool
+This Won't Work
+\:::
+
+The error message helps you identify invalid tool IDs during development.
+
+## Comparison with Frontmatter
+
+There are two ways to use tools:
+
+### Frontmatter (Page-Level)
+
+```markdown
+---
+tool: match
+---
+```
+
+- Opens automatically when page loads
+- One tool per page
+- Suited for dedicated tutorial pages
+
+### Tool Buttons (Inline)
+
+```markdown
+:::tools match
+Open Tool
+:::
+```
+
+- Opens on button click
+- Multiple tools per page
+- Suited for reference pages with multiple examples
+
+You can use both together!
+
+## Complete Example
+
+Here's a complete lesson using tool buttons:
+
+---
+
+### Lesson: Python Movement Commands
+
+In this lesson, you'll learn how to move objects using Python code.
+
+**Concept**: The `forward()` method moves an object in its current direction.
+
+```python
+shape.forward(3)  # Move 3 spaces
+```
+
+\:::tools match
+🎮 Try Forward Movement
+\:::
+
+**Concept**: The `right()` method rotates an object 90° clockwise.
+
+```python
+shape.right()  # Rotate right
+```
+
+\:::tools match
+🎮 Try Rotation
+\:::
+
+**Challenge**: Combine both to navigate a path!
+
+\:::tools match
+🚀 Complete Challenge
+\:::
+
+---
+
+## Summary
+
+The `:::tools` component is a powerful way to create interactive, engaging documentation. Use it to:
+
+- ✅ Provide hands-on practice
+- ✅ Create interactive tutorials
+- ✅ Offer multiple learning tools
+- ✅ Enhance user engagement
+
+Happy teaching! 🎓
+
+
+# Mermaid Diagrams Test
+
+This page demonstrates how to use Mermaid diagrams in your markdown content.
+
+## Simple Flowchart
+
+```mermaid
+graph TD
+    A[Start] --> B{Is it working?}
+    B -->|Yes| C[Great!]
+    B -->|No| D[Debug]
+    D --> B
+    C --> E[End]
+```
+
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Browser
+    participant Server
+    User->>Browser: Click button
+    Browser->>Server: Send request
+    Server-->>Browser: Return data
+    Browser-->>User: Display result
+```
+
+## Class Diagram
+
+```mermaid
+classDiagram
+    class Animal {
+        +String name
+        +int age
+        +eat()
+        +sleep()
+    }
+    class Dog {
+        +String breed
+        +bark()
+    }
+    class Cat {
+        +String color
+        +meow()
+    }
+    Animal <|-- Dog
+    Animal <|-- Cat
+```
+
+## Regular Code Block (for comparison)
+
+```javascript
+// This is regular JavaScript code
+function hello() {
+  console.log('Hello, world!')
+}
+```

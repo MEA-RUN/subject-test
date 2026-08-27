@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Canvas Visualization with Python Interpreter (Pyodide)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@5.3.0/css/xterm.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 10px;
+            font-family: monospace;
+            background: #f0f0f0;
+        }
+        #loading {
+            padding: 20px;
+            font-size: 18px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #app {
+            display: none;
+            flex: 1;
+            display: flex;
+            gap: 10px;
+            height: calc(100vh - 20px);
+        }
+        #canvas-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        canvas {
+            border: 1px solid #000;
+            background: white;
+        }
+        #guide-button {
+            margin-top: 10px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: monospace;
+            transition: background 0.3s;
+        }
+        #guide-button:hover {
+            background: #45a049;
+        }
+        #guide-button:active {
+            background: #3d8b40;
+        }
+        #popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        #popup-overlay.show {
+            display: flex;
+        }
+        #popup-content {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 90%;
+            max-height: 90%;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        #popup-close {
+            position: sticky;
+            top: 15px;
+            background: #f44336;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            margin-left: auto;
+            margin-bottom: 15px;
+        }
+        #popup-close:hover {
+            background: #da190b;
+            transform: scale(1.1);
+        }
+        #popup-close:active {
+            transform: scale(0.95);
+        }
+        #popup-tutorial {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        #popup-tutorial h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        #popup-tutorial h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        #popup-tutorial code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        #popup-tutorial pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        #popup-tutorial pre code {
+            background: transparent;
+            padding: 0;
+            color: inherit;
+        }
+        #popup-tutorial ul, #popup-tutorial ol {
+            margin: 10px 0;
+            padding-left: 30px;
+        }
+        #popup-tutorial li {
+            margin: 5px 0;
+        }
+        #popup-tutorial strong {
+            color: #2c3e50;
+        }
+        #terminal-container {
+            flex: 1;
+            border: 1px solid #000;
+            background: #1e1e1e;
+        }
+        #terminal-container .xterm {
+            font-family: "Source Code Pro", "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">Loading Pyodide...</div>
+    <div id="app" style="display: none;">
+        <div id="canvas-container">
+            <button id="guide-button">📖 Guide</button>
+        </div>
+        <div id="terminal-container"></div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div id="popup-overlay">
+        <div id="popup-content">
+            <button id="popup-close">×</button>
+            <div id="popup-tutorial"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/pyodide/v0.29.1/full/pyodide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xterm@5.3.0/lib/xterm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xterm-addon-fit@0.8.0/lib/xterm-addon-fit.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+    <script>
+        let pyodide;
+        let canvas, ctx;
+        let animationFrameId;
+        let lastTime = 0;
+        let terminal;
+        let currentLine = '';
+        let multiLineBuffer = '';
+
+        // Popup functionality
+        async function loadTutorial() {
+            try {
+                const response = await fetch('GUIDE_TUTORIEL_COURT.md');
+                const markdown = await response.text();
+                const html = marked.parse(markdown);
+                document.getElementById('popup-tutorial').innerHTML = html;
+            } catch (error) {
+                console.error('Error loading tutorial:', error);
+                document.getElementById('popup-tutorial').innerHTML = 
+                    '<p>Error loading tutorial. Please make sure GUIDE_TUTORIEL_COURT.md exists.</p>';
+            }
+        }
+
+        function showPopup() {
+            document.getElementById('popup-overlay').classList.add('show');
+        }
+
+        function hidePopup() {
+            document.getElementById('popup-overlay').classList.remove('show');
+        }
+
+        // Setup popup event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            const guideButton = document.getElementById('guide-button');
+            const closeButton = document.getElementById('popup-close');
+            const overlay = document.getElementById('popup-overlay');
+
+            guideButton.addEventListener('click', async () => {
+                await loadTutorial();
+                showPopup();
+            });
+
+            closeButton.addEventListener('click', hidePopup);
+
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    hidePopup();
+                }
+            });
+
+            // Close on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && overlay.classList.contains('show')) {
+                    hidePopup();
+                }
+            });
+        });
+
+        // Setup canvas functions for Python
+        function setupPyodide() {
+            if (!canvas || !ctx) {
+                throw new Error('Canvas and context must be created before setting up Pyodide');
+            }
+            
+            const jsModule = {
+                canvas_clear: (canvasId, r, g, b) => {
+                    ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                },
+                canvas_fill_rect: (canvasId, x, y, w, h, r, g, b, a) => {
+                    ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${a !== undefined ? a : 1})`;
+                    ctx.fillRect(x, y, w, h);
+                },
+                canvas_stroke_rect: (canvasId, x, y, w, h, r, g, b, width) => {
+                    ctx.strokeStyle = `rgb(${r}, ${g}, ${b})`;
+                    ctx.lineWidth = width;
+                    ctx.strokeRect(x, y, w, h);
+                },
+                canvas_fill_circle: (canvasId, x, y, radius, r, g, b, a) => {
+                    ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${a !== undefined ? a : 1})`;
+                    ctx.beginPath();
+                    ctx.arc(x, y, radius, 0, 2 * Math.PI);
+                    ctx.fill();
+                },
+                canvas_stroke_circle: (canvasId, x, y, radius, r, g, b, width) => {
+                    ctx.strokeStyle = `rgb(${r}, ${g}, ${b})`;
+                    ctx.lineWidth = width;
+                    ctx.beginPath();
+                    ctx.arc(x, y, radius, 0, 2 * Math.PI);
+                    ctx.stroke();
+                },
+                canvas_draw_line: (canvasId, x1, y1, x2, y2, r, g, b, width) => {
+                    ctx.strokeStyle = `rgb(${r}, ${g}, ${b})`;
+                    ctx.lineWidth = width;
+                    ctx.beginPath();
+                    ctx.moveTo(x1, y1);
+                    ctx.lineTo(x2, y2);
+                    ctx.stroke();
+                },
+                canvas_fill_polygon: (canvasId, coords, r, g, b, a) => {
+                    ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${a !== undefined ? a : 1})`;
+                    ctx.beginPath();
+                    for (let i = 0; i < coords.length; i += 2) {
+                        if (i === 0) ctx.moveTo(coords[i], coords[i + 1]);
+                        else ctx.lineTo(coords[i], coords[i + 1]);
+                    }
+                    ctx.closePath();
+                    ctx.fill();
+                },
+                canvas_stroke_polygon: (canvasId, coords, r, g, b, width) => {
+                    ctx.strokeStyle = `rgb(${r}, ${g}, ${b})`;
+                    ctx.lineWidth = width;
+                    ctx.beginPath();
+                    for (let i = 0; i < coords.length; i += 2) {
+                        if (i === 0) ctx.moveTo(coords[i], coords[i + 1]);
+                        else ctx.lineTo(coords[i], coords[i + 1]);
+                    }
+                    ctx.closePath();
+                    ctx.stroke();
+                },
+                canvas_draw_text: (canvasId, text, x, y, fontSize, r, g, b) => {
+                    ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
+                    ctx.font = `${fontSize}px monospace`;
+                    ctx.fillText(text, x, y);
+                },
+                canvas_copy: (sourceId, targetId, x, y) => {}
+            };
+            
+            try {
+                pyodide.unregisterJsModule("js");
+            } catch (e) {}
+            
+            pyodide.registerJsModule("js", jsModule);
+        }
+
+        async function loadPythonCode() {
+            const response = await fetch('match_the_shape.py');
+            return await response.text();
+        }
+
+        function checkIncomplete(code) {
+            const trimmed = code.trim();
+            if (trimmed.endsWith(':') || trimmed.endsWith('\\')) {
+                return {incomplete: true};
+            }
+            
+            let openParens = 0, openBrackets = 0, openBraces = 0;
+            let inString = false;
+            let stringChar = null;
+            
+            for (let i = 0; i < code.length; i++) {
+                const char = code[i];
+                if (!inString) {
+                    if (char === '"' || char === "'") {
+                        inString = true;
+                        stringChar = char;
+                    } else if (char === '(') openParens++;
+                    else if (char === ')') openParens--;
+                    else if (char === '[') openBrackets++;
+                    else if (char === ']') openBrackets--;
+                    else if (char === '{') openBraces++;
+                    else if (char === '}') openBraces--;
+                } else {
+                    if (char === stringChar && code[i - 1] !== '\\') {
+                        inString = false;
+                        stringChar = null;
+                    }
+                }
+            }
+            
+            if (openParens > 0 || openBrackets > 0 || openBraces > 0) {
+                return {incomplete: true};
+            }
+            
+            try {
+                const escapedCode = code.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n').replace(/\r/g, '');
+                const result = pyodide.runPython(`
+import json
+try:
+    compile('''${escapedCode}''', '<string>', 'single')
+    json.dumps({'incomplete': False})
+except SyntaxError as e:
+    msg = str(e)
+    if 'unexpected EOF' in msg or 'EOF while scanning' in msg:
+        json.dumps({'incomplete': True})
+    else:
+        json.dumps({'incomplete': False, 'error': msg})
+except Exception as e:
+    json.dumps({'incomplete': False, 'error': str(e)})
+`);
+                return JSON.parse(result);
+            } catch (e) {
+                return {incomplete: false};
+            }
+        }
+
+        function executeCode(code) {
+            try {
+                const escapedCode = code.replace(/\\/g, '\\\\').replace(/'/g, "\\'").replace(/\n/g, '\\n').replace(/\r/g, '');
+                const result = pyodide.runPython(`
+import json
+import sys
+from io import StringIO
+
+result, output, error = execute_python_code('''${escapedCode}''')
+
+if result is not None:
+    try:
+        result_repr = repr(result)
+    except:
+        result_repr = str(result)
+else:
+    result_repr = None
+
+json.dumps({'result': result_repr, 'output': output, 'error': error})
+`);
+                return JSON.parse(result);
+            } catch (e) {
+                return {result: null, output: '', error: e.toString()};
+            }
+        }
+
+        function setupTerminal() {
+            terminal = new Terminal({
+                cursorBlink: true,
+                fontSize: 14,
+                fontFamily: '"Source Code Pro", "Courier New", monospace',
+                theme: {
+                    background: '#1e1e1e',
+                    foreground: '#d4d4d4',
+                    cursor: '#aeafad',
+                    selection: '#264f78'
+                }
+            });
+            
+            const fitAddon = new FitAddon.FitAddon();
+            terminal.loadAddon(fitAddon);
+            
+            const container = document.getElementById('terminal-container');
+            terminal.open(container);
+            fitAddon.fit();
+            
+            terminal.attachCustomKeyEventHandler((event) => {
+                if (event.key === 'Tab' && !event.ctrlKey && !event.altKey && !event.metaKey) {
+                    event.preventDefault();
+                    return true;
+                }
+                return true;
+            });
+            
+            terminal.writeln('Welcome to the Python Interpreter!');
+            terminal.writeln('');
+            terminal.writeln('Available objects:');
+            terminal.writeln('- shape.Square(color): Create a new square (default direction: right)');
+            terminal.writeln('- shape.Circle(color): Create a new circle (default direction: left)');
+            terminal.writeln('- shape.Triangle(color): Create a new triangle (default direction: up)');
+            terminal.writeln('- shape_entities: List of all squares, circles, and triangles');
+            terminal.writeln('');
+            terminal.writeln('Example:');
+            terminal.writeln('>>> s = shape.Square("red")');
+            terminal.writeln('>>> s.set_position(2, 3)');
+            terminal.writeln('>>> s.forward(1)');
+            terminal.writeln('');
+            terminal.write('>>> ');
+            
+            terminal.onData((data) => {
+                if (data === '\r' || data === '\n') {
+                    terminal.write('\r\n');
+                    
+                    if (currentLine.trim()) {
+                        // Non-empty line
+                        if (multiLineBuffer) {
+                            // Already in multi-line mode - add line and continue
+                            multiLineBuffer += '\n' + currentLine;
+                            terminal.write('... ');
+                            currentLine = '';
+                        } else {
+                            // First line - check if it's complete
+                            const incompleteCheck = checkIncomplete(currentLine);
+                            
+                            if (incompleteCheck.incomplete) {
+                                // Incomplete - start multi-line block
+                                multiLineBuffer = currentLine;
+                                terminal.write('... ');
+                                currentLine = '';
+                            } else {
+                                // Complete single line - execute immediately
+                                const code = currentLine;
+                                currentLine = '';
+                                
+                                const {result, output, error} = executeCode(code);
+                                
+                                if (output && output.trim()) {
+                                    const lines = output.split('\n');
+                                    for (let i = 0; i < lines.length; i++) {
+                                        if (i < lines.length - 1 || lines[i]) {
+                                            terminal.writeln(lines[i]);
+                                        }
+                                    }
+                                }
+                                
+                                if (error) {
+                                    terminal.writeln(`\x1b[31mError: ${error}\x1b[0m`);
+                                } else if (result !== null && result !== undefined) {
+                                    terminal.writeln(result);
+                                }
+                                
+                                terminal.write('>>> ');
+                            }
+                        }
+                    } else {
+                        // Empty line - execute if we have a buffer
+                        if (multiLineBuffer) {
+                            const incompleteCheck = checkIncomplete(multiLineBuffer);
+                            
+                            if (incompleteCheck.incomplete) {
+                                terminal.write('... ');
+                            } else {
+                                const code = multiLineBuffer;
+                                multiLineBuffer = '';
+                                
+                                const {result, output, error} = executeCode(code);
+                                
+                                if (output && output.trim()) {
+                                    const lines = output.split('\n');
+                                    for (let i = 0; i < lines.length; i++) {
+                                        if (i < lines.length - 1 || lines[i]) {
+                                            terminal.writeln(lines[i]);
+                                        }
+                                    }
+                                }
+                                
+                                if (error) {
+                                    terminal.writeln(`\x1b[31mError: ${error}\x1b[0m`);
+                                } else if (result !== null && result !== undefined) {
+                                    terminal.writeln(result);
+                                }
+                                
+                                terminal.write('>>> ');
+                            }
+                        } else {
+                            terminal.write('>>> ');
+                        }
+                        currentLine = '';
+                    }
+                } else if (data === '\x7f' || data === '\b') {
+                    if (currentLine.length > 0) {
+                        currentLine = currentLine.slice(0, -1);
+                        terminal.write('\b \b');
+                    }
+                } else if (data === '\x03') {
+                    if (multiLineBuffer) {
+                        multiLineBuffer = '';
+                        currentLine = '';
+                        terminal.writeln('\nKeyboardInterrupt');
+                        terminal.write('>>> ');
+                    }
+                } else if (data === '\t' || data === '\x09') {
+                    currentLine += '    ';
+                    terminal.write('    ');
+                } else if (data >= ' ') {
+                    currentLine += data;
+                    terminal.write(data);
+                }
+            });
+            
+            window.addEventListener('resize', () => {
+                fitAddon.fit();
+            });
+        }
+
+        async function main() {
+            try {
+                pyodide = await loadPyodide({ indexURL: "https://cdn.jsdelivr.net/pyodide/v0.29.1/full/" });
+                document.getElementById('loading').textContent = 'Loading application...';
+                
+                const appDiv = document.getElementById('app');
+                appDiv.style.display = 'flex';
+                
+                const canvasContainer = document.getElementById('canvas-container');
+                
+                canvas = document.createElement('canvas');
+                canvas.id = 'canvas';
+                canvas.width = 600;
+                canvas.height = 600;
+                ctx = canvas.getContext('2d');
+                ctx.imageSmoothingEnabled = false;
+                
+                canvasContainer.insertBefore(canvas, canvasContainer.firstChild);
+                
+                setupPyodide();
+                
+                pyodide.runPython(`
+import sys
+if 'js' in sys.modules:
+    del sys.modules['js']
+import js
+`);
+                
+                setupTerminal();
+                
+                const pythonCode = await loadPythonCode();
+                pyodide.runPython(pythonCode);
+                pyodide.runPython('main()');
+                
+                document.getElementById('loading').style.display = 'none';
+                
+                function animate(currentTime) {
+                    if (currentTime - lastTime >= 16) {
+                        try {
+                            pyodide.runPython('render_frame()');
+                        } catch (e) {
+                            console.error('Animation error:', e);
+                        }
+                        lastTime = currentTime;
+                    }
+                    animationFrameId = requestAnimationFrame(animate);
+                }
+                
+                animate(0);
+                
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('loading').textContent = 'Error loading application: ' + error.message;
+            }
+        }
+
+        main();
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"69d7ee6239214269bf03b4159a37f109","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

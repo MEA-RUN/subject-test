@@ -1,0 +1,43 @@
+# reef-site
+
+## Documentation Sets
+
+- [reef-site](https://MEA-RUN.github.io/llms-full.txt)
+
+## LandingFr
+
+- [Manta Epitech Academy - Apprendre, Construire, Innover](https://MEA-RUN.github.io/raw/fr.md): Bienvenue à Manta Epitech Academy. Accédez à des ressources pédagogiques complètes, des outils interactifs et de la documentation pour accélérer votre parcours de développement.
+
+## DocsFr
+
+- [Introduction](https://MEA-RUN.github.io/raw/fr/getting-started/introduction.md): Welcome to Docus theme documentation.
+- [Installation](https://MEA-RUN.github.io/raw/fr/getting-started/installation.md): Get started with Docus.
+- [Project Structure](https://MEA-RUN.github.io/raw/fr/getting-started/project-structure.md): Docus provides a ready-to-use documentation website starter.
+- [Web Editor](https://MEA-RUN.github.io/raw/fr/getting-started/studio.md): Build your documentation using Nuxt Studio web editor
+- [Migration](https://MEA-RUN.github.io/raw/fr/getting-started/migration.md):  How to migrate your documentation from an existing Markdown solution to Docus
+- [Markdown Syntax](https://MEA-RUN.github.io/raw/fr/essentials/markdown-syntax.md): Text, title, and styling in standard markdown.
+- [Code Blocks](https://MEA-RUN.github.io/raw/fr/essentials/code-blocks.md): Display inline code and code blocks in your documentation.
+- [Markdown Components](https://MEA-RUN.github.io/raw/fr/essentials/components.md): Use Markdown components to help you structure your content, with the help of Nuxt UI.
+- [Images and Embeds](https://MEA-RUN.github.io/raw/fr/essentials/images-embeds.md): Add image, video, and other HTML elements
+- [Match the Shape Tutorial](https://MEA-RUN.github.io/raw/fr/essentials/match-tutorial.md): Learn Python programming by solving shape matching puzzles
+- [Interactive Tools Demo](https://MEA-RUN.github.io/raw/fr/essentials/tools-component-demo.md): Demonstration of embedding interactive tools in content
+- [Mermaid Diagrams Test](https://MEA-RUN.github.io/raw/fr/essentials/mermaid-test.md): Testing mermaid diagram rendering in Nuxt Content
+
+## LandingEn
+
+- [Manta Epitech Academy - Learn, Build, Innovate](https://MEA-RUN.github.io/raw/en.md): Welcome to Manta Epitech Academy. Access comprehensive learning resources, interactive tools, and documentation to accelerate your development journey.
+
+## DocsEn
+
+- [Introduction](https://MEA-RUN.github.io/raw/en/getting-started/introduction.md): Welcome to Docus theme documentation.
+- [Installation](https://MEA-RUN.github.io/raw/en/getting-started/installation.md): Get started with Docus.
+- [Project Structure](https://MEA-RUN.github.io/raw/en/getting-started/project-structure.md): Docus provides a ready-to-use documentation website starter.
+- [Web Editor](https://MEA-RUN.github.io/raw/en/getting-started/studio.md): Build your documentation using Nuxt Studio web editor
+- [Migration](https://MEA-RUN.github.io/raw/en/getting-started/migration.md):  How to migrate your documentation from an existing Markdown solution to Docus
+- [Markdown Syntax](https://MEA-RUN.github.io/raw/en/essentials/markdown-syntax.md): Text, title, and styling in standard markdown.
+- [Code Blocks](https://MEA-RUN.github.io/raw/en/essentials/code-blocks.md): Display inline code and code blocks in your documentation.
+- [Markdown Components](https://MEA-RUN.github.io/raw/en/essentials/components.md): Use Markdown components to help you structure your content, with the help of Nuxt UI.
+- [Images and Embeds](https://MEA-RUN.github.io/raw/en/essentials/images-embeds.md): Add image, video, and other HTML elements
+- [Match the Shape Tutorial](https://MEA-RUN.github.io/raw/en/essentials/match-tutorial.md): Learn Python programming by solving shape matching puzzles
+- [Interactive Tools Demo](https://MEA-RUN.github.io/raw/en/essentials/tools-component-demo.md): Demonstration of embedding interactive tools in content
+- [Mermaid Diagrams Test](https://MEA-RUN.github.io/raw/en/essentials/mermaid-test.md): Testing mermaid diagram rendering in Nuxt Content

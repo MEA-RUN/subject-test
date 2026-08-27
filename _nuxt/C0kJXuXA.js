@@ -1,0 +1,1 @@
+import{L as e,g as t,jn as n,nr as r}from"./B4b-2GOK.js";import{t as i}from"./DwDorq67.js";function a(t){let i=e(),a=i?.type.emits,o={};return a?.length||console.warn(`No emitted event found. Please check component: ${i?.type.__name}`),a?.forEach(e=>{o[r(n(e))]=(...n)=>t(e,...n)}),o}function o(e,n){let r=i(e),o=n?a(n):{};return t(()=>({...r.value,...o}))}export{a as n,o as t};
